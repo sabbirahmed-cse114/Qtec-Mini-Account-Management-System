@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36127.28 d17.14
+VisualStudioVersion = 17.14.36127.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtec.AccountManagement.Web", "Src\Qtec.AccountManagement.Web\Qtec.AccountManagement.Web.csproj", "{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtec.AccountManagement.Domain", "Src\Qtec.AccountManagement.Domain\Qtec.AccountManagement.Domain.csproj", "{B5420D07-B883-4C1A-AFBE-03E864E3581D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtec.AccountManagement.Application", "Src\Qtec.AccountManagement.Application\Qtec.AccountManagement.Application.csproj", "{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtec.AccountManagement.Infrastructure", "Src\Qtec.AccountManagement.Infrastructure\Qtec.AccountManagement.Infrastructure.csproj", "{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5420D07-B883-4C1A-AFBE-03E864E3581D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5420D07-B883-4C1A-AFBE-03E864E3581D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5420D07-B883-4C1A-AFBE-03E864E3581D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5420D07-B883-4C1A-AFBE-03E864E3581D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
