@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sabbi\\Downloads\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\Qtec.AccountManagement.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\Qtec.AccountManagement.Infrastructure.csproj",
       "projectName": "Qtec.AccountManagement.Infrastructure",
-      "projectPath": "C:\\Users\\sabbi\\Downloads\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\Qtec.AccountManagement.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\Qtec.AccountManagement.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\sabbi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sabbi\\Downloads\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,5 +1,9 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Qtec.AccountManagement.Web;
 using Serilog;
 using Serilog.Events;
+using System.Reflection;
 
 #region Bootstrap Logger Configuration
 var configuration = new ConfigurationBuilder()
@@ -24,6 +28,17 @@ try
         .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
         .Enrich.FromLogContext()
         .ReadFrom.Configuration(builder.Configuration));
+    #endregion
+
+    var connectionString = configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+    var migrationAssembly = Assembly.GetExecutingAssembly().FullName;
+
+    #region AutoFac
+    builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+    builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+    {
+        containerBuilder.RegisterModule(new WebModule(connectionString, migrationAssembly));
+    });
     #endregion
 
 
