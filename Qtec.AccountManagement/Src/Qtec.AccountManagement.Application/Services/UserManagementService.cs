@@ -30,6 +30,14 @@ namespace Qtec.AccountManagement.Application.Services
                 await _unitOfWork.CommitAsync();
                 return true;
         }
+
+        public async Task<User?> LoginAsync(string email, string password)
+        {
+            var hashedPassword = HashPassword(password);
+            var user = await _unitOfWork.Users.ValidateUserAsync(email, hashedPassword);
+            return user;
+        }
+
         private string HashPassword(string password)
         {
             using var sha = SHA256.Create();

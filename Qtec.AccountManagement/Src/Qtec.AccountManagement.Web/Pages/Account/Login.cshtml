@@ -1,0 +1,19 @@
+﻿@page
+@model Qtec.AccountManagement.Web.Pages.Account.LoginModel
+@{
+    <div class="text-center">
+        <h2>Login</h2>
+    </div>
+    <form method="post">
+        <div class="mb-3">
+            <label>Email</label>
+            <input asp-for="Email" class="form-control" placeholder="test@example.com" />
+        </div>
+        <div class="mb-3">
+            <label>Password</label>
+            <input asp-for="Password" type="password" class="form-control" placeholder="******" />
+        </div>
+        <div style="color:red">@Model.ErrorMessage</div>
+        <button type="submit" class="btn btn-outline-info form-control fw-bolder">Login</button>
+    </form>
+}
