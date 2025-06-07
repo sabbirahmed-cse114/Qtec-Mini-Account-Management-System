@@ -12,4 +12,13 @@
     <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Qtec.AccountManagement.Application\Qtec.AccountManagement.Application.csproj" />
+    <ProjectReference Include="..\Qtec.AccountManagement.Infrastructure\Qtec.AccountManagement.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
 </Project>

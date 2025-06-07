@@ -1,12 +1,34 @@
 ﻿using Autofac;
+using Qtec.AccountManagement.Application.Services;
+using Qtec.AccountManagement.Domain;
+using Qtec.AccountManagement.Domain.RepositoryContracts;
+using Qtec.AccountManagement.Infrastructure.Repositories;
+using Qtec.AccountManagement.Infrastructure.UnitOfWorks;
+using Qtec.AccountManagement.Web.Pages.Account;
+using System.Data.SqlClient;
 
 namespace Qtec.AccountManagement.Web
 {
-    public class WebModule(string connectionString, string migrationAssembly) : Module
+    public class WebModule(string connectionString) : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterType<SqlConnection>()
+           .AsSelf()
+           .WithParameter("connectionString", connectionString)
+           .InstancePerLifetimeScope();
 
+            builder.RegisterType<UserRepository>()
+                .As<IUserRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<UnitOfWork>()
+                .As<IUnitOfWork>()
+                .WithParameter("connectionString", connectionString)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<UserManagementService>()
+                .InstancePerLifetimeScope();
         }
     }
 }
