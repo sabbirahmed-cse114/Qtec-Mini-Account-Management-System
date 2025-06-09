@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}|Src\\Qtec.AccountManagement.Application\\Qtec.AccountManagement.Application.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.application\\services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}|Src\\Qtec.AccountManagement.Application\\Qtec.AccountManagement.Application.csproj|solutionrelative:src\\qtec.accountmanagement.application\\services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +46,119 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T11:57:43.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T11:55:54.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T11:15:26.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwCUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T10:18:06.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T10:16:36.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA9wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T10:15:44.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAmwDQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T09:44:56.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Program.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Program.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T09:44:01.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UserManagementService.cs",
               "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Application\\Services\\UserManagementService.cs",
               "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Application\\Services\\UserManagementService.cs",
               "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Application\\Services\\UserManagementService.cs",
               "RelativeToolTip": "Src\\Qtec.AccountManagement.Application\\Services\\UserManagementService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAcwCYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAkwCIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T01:57:36.76Z",
+              "WhenOpened": "2025-06-09T09:28:54.55Z",
               "EditorCaption": ""
             }
           ]

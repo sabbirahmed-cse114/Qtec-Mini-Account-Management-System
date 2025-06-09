@@ -41,6 +41,16 @@ try
 
 
     builder.Services.AddRazorPages();
+    builder.Services.AddAuthentication("MyCookieAuth")
+    .AddCookie("MyCookieAuth", options =>
+    {
+        options.LoginPath = "/Account/Login";
+        options.LogoutPath = "/Account/Logout";
+    });
+
+
+    builder.Services.AddAuthorization(); // ???? simple ????
+
 
     var app = builder.Build();
 
@@ -54,7 +64,7 @@ try
     app.UseStaticFiles();
 
     app.UseRouting();
-
+    app.UseAuthentication();
     app.UseAuthorization();
 
     app.MapRazorPages();
