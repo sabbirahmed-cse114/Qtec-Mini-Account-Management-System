@@ -13,7 +13,7 @@ namespace Qtec.AccountManagement.Application.Services
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<bool> ExecuteAsync(string name, string email, string password)
+        public async Task<bool> RegistrationAsync(string name, string email, string password)
         {
             if (await _unitOfWork.Users.IsEmailTakenAsync(email))
                 return false;

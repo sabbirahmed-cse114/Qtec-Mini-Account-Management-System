@@ -11,6 +11,7 @@ namespace Qtec.AccountManagement.Infrastructure.UnitOfWorks
         private SqlTransaction _transaction;
 
         public IUserRepository Users { get; }
+        public IRoleRepository Roles { get; }
         public UnitOfWork(string connectionString)
         {
             _connection = new SqlConnection(connectionString);
@@ -18,6 +19,7 @@ namespace Qtec.AccountManagement.Infrastructure.UnitOfWorks
             _transaction = _connection.BeginTransaction();
 
             Users = new UserRepository(_connection, _transaction);
+            Roles = new RoleRepository(_connection, _transaction);
         }
 
         public async Task CommitAsync()

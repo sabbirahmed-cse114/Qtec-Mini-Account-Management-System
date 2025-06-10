@@ -18,6 +18,10 @@ namespace Qtec.AccountManagement.Web
            .WithParameter("connectionString", connectionString)
            .InstancePerLifetimeScope();
 
+            builder.RegisterType<RoleRepository>()
+                .As<IRoleRepository>()
+                .InstancePerLifetimeScope();
+
             builder.RegisterType<UserRepository>()
                 .As<IUserRepository>()
                 .InstancePerLifetimeScope();
@@ -28,6 +32,9 @@ namespace Qtec.AccountManagement.Web
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<UserManagementService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<RoleManagementService>()
                 .InstancePerLifetimeScope();
         }
     }

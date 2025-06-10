@@ -23,7 +23,7 @@ namespace Qtec.AccountManagement.Web.Pages.Account
 
         public async Task<IActionResult> OnPostAsync()
         {
-            var success = await _userManagementService.ExecuteAsync(Name, Email, Password);
+            var success = await _userManagementService.RegistrationAsync(Name, Email, Password);
 
             if (!success)
             {
