@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Qtec.AccountManagement.Application.Services;
 
-namespace Qtec.AccountManagement.Web.Pages.Role
+namespace Qtec.AccountManagement.Web.Pages.Roles
 {
     public class CreateRoleModel : PageModel
     {

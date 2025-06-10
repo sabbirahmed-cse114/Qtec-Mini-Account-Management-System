@@ -39,5 +39,27 @@ namespace Qtec.AccountManagement.Infrastructure.Repositories
 
             await cmd.ExecuteNonQueryAsync();
         }
+
+        public async Task<IEnumerable<Role>> GetAllRolesAsync()
+        {
+            var roles = new List<Role>();
+
+            using var cmd = new SqlCommand("sp_GetAllRoles", _connection, _transaction)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            using var reader = await cmd.ExecuteReaderAsync();
+
+            while (await reader.ReadAsync())
+            {
+                roles.Add(new Role
+                {
+                    Id = reader.GetGuid(0),
+                    Name = reader.GetString(1)
+                });
+            }
+            return roles;
+        }
     }
 }

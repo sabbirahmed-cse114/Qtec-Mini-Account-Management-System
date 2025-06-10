@@ -28,5 +28,10 @@ namespace Qtec.AccountManagement.Application.Services
             await _unitOfWork.CommitAsync();
             return true;
         }
+
+        public Task<IEnumerable<Role>> GetRoleAsync()
+        {
+            return _unitOfWork.Roles.GetAllRolesAsync();
+        }
     }
 }

@@ -1,0 +1,30 @@
+﻿@page
+@model Qtec.AccountManagement.Web.Pages.Roles.RoleListModel
+@{
+
+<h2>Role List</h2>
+
+<div class="d-flex">
+        <table class="table table-responsive border fw-bold">
+            <thead>
+                <tr>
+                    <th>Role Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var role in Model.Roles)
+                {
+                    <tr>
+                        <td>@role.Name</td>
+                        <td class="text-end">
+                            <button class="btn btn-outline-info btn-sm"><i class="bi bi-pencil-square"></i></button>
+                            &nbsp;
+                            <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+</div>
+}
