@@ -61,5 +61,17 @@ namespace Qtec.AccountManagement.Infrastructure.Repositories
             }
             return roles;
         }
+
+        public async Task UpdateRoleAsync(Role role)
+        {
+            var cmd = new SqlCommand("sp_UpdateRole", _connection, _transaction)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Parameters.AddWithValue("@Id", role.Id);
+            cmd.Parameters.AddWithValue("@Name", role.Name);
+
+            await cmd.ExecuteNonQueryAsync();
+        }
     }
 }

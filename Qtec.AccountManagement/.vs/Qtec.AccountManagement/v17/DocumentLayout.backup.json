@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\roles\\rolelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\roles\\rolelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}|Src\\Qtec.AccountManagement.Application\\Qtec.AccountManagement.Application.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.application\\services\\rolemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}|Src\\Qtec.AccountManagement.Application\\Qtec.AccountManagement.Application.csproj|solutionrelative:src\\qtec.accountmanagement.application\\services\\rolemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}|Src\\Qtec.AccountManagement.Infrastructure\\Qtec.AccountManagement.Infrastructure.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.infrastructure\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}|Src\\Qtec.AccountManagement.Infrastructure\\Qtec.AccountManagement.Infrastructure.csproj|solutionrelative:src\\qtec.accountmanagement.infrastructure\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\roles\\createrole.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\roles\\createrole.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}|Src\\Qtec.AccountManagement.Application\\Qtec.AccountManagement.Application.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.application\\services\\rolemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}|Src\\Qtec.AccountManagement.Application\\Qtec.AccountManagement.Application.csproj|solutionrelative:src\\qtec.accountmanagement.application\\services\\rolemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\roles\\rolelist.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\roles\\rolelist.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5420D07-B883-4C1A-AFBE-03E864E3581D}|Src\\Qtec.AccountManagement.Domain\\Qtec.AccountManagement.Domain.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5420D07-B883-4C1A-AFBE-03E864E3581D}|Src\\Qtec.AccountManagement.Domain\\Qtec.AccountManagement.Domain.csproj|solutionrelative:src\\qtec.accountmanagement.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\roles\\rolelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\roles\\rolelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\roles\\createrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\roles\\createrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5420D07-B883-4C1A-AFBE-03E864E3581D}|Src\\Qtec.AccountManagement.Domain\\Qtec.AccountManagement.Domain.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.domain\\repositorycontracts\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5420D07-B883-4C1A-AFBE-03E864E3581D}|Src\\Qtec.AccountManagement.Domain\\Qtec.AccountManagement.Domain.csproj|solutionrelative:src\\qtec.accountmanagement.domain\\repositorycontracts\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}|Src\\Qtec.AccountManagement.Infrastructure\\Qtec.AccountManagement.Infrastructure.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}|Src\\Qtec.AccountManagement.Infrastructure\\Qtec.AccountManagement.Infrastructure.csproj|solutionrelative:src\\qtec.accountmanagement.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\shared\\_updaterolemodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\shared\\_updaterolemodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,92 +30,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateRole.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\CreateRole.cshtml.cs",
-              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\CreateRole.cshtml.cs",
-              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\CreateRole.cshtml.cs",
-              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\CreateRole.cshtml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAnwBoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T03:36:03.2Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Domain\\Entities\\Role.cs",
-              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Domain\\Entities\\Role.cs",
-              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Domain\\Entities\\Role.cs",
-              "RelativeToolTip": "Src\\Qtec.AccountManagement.Domain\\Entities\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T02:43:40.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RoleList.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml.cs",
-              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml.cs",
-              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml.cs",
-              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAcwBMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T02:39:34.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "RoleList.cshtml",
               "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml",
               "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml",
               "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml",
               "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-10T02:38:14.707Z",
+              "WhenOpened": "2025-06-10T14:31:45.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_UpdateRoleModal.cshtml",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_UpdateRoleModal.cshtml",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_UpdateRoleModal.cshtml",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_UpdateRoleModal.cshtml",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_UpdateRoleModal.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T14:24:45.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RoleManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Application\\Services\\RoleManagementService.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Application\\Services\\RoleManagementService.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Application\\Services\\RoleManagementService.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Application\\Services\\RoleManagementService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAMwC8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T14:23:27.19Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IRoleRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Domain\\RepositoryContracts\\IRoleRepository.cs",
-              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Domain\\RepositoryContracts\\IRoleRepository.cs",
-              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Domain\\RepositoryContracts\\IRoleRepository.cs",
-              "RelativeToolTip": "Src\\Qtec.AccountManagement.Domain\\RepositoryContracts\\IRoleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T02:23:19.737Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateRole.cshtml",
-              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\CreateRole.cshtml",
-              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\CreateRole.cshtml",
-              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\CreateRole.cshtml",
-              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\CreateRole.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-10T01:57:38.853Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBoAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T01:27:50.492Z"
             },
             {
               "$type": "Document",
@@ -141,21 +77,23 @@
               "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\RoleRepository.cs",
               "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\RoleRepository.cs",
               "RelativeToolTip": "Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\RoleRepository.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAvwDUAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T01:09:00.836Z"
+              "WhenOpened": "2025-06-10T14:23:27.32Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RoleManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Application\\Services\\RoleManagementService.cs",
-              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Application\\Services\\RoleManagementService.cs",
-              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Application\\Services\\RoleManagementService.cs",
-              "RelativeToolTip": "Src\\Qtec.AccountManagement.Application\\Services\\RoleManagementService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAEwB0AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "RoleList.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Roles\\RoleList.cshtml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAkwB0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T14:53:35.266Z"
+              "WhenOpened": "2025-06-10T14:23:27.332Z",
+              "EditorCaption": ""
             }
           ]
         }

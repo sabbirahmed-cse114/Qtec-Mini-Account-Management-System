@@ -2,29 +2,52 @@
 @model Qtec.AccountManagement.Web.Pages.Roles.RoleListModel
 @{
 
-<h2>Role List</h2>
+    ViewData["Title"] = "Role List";
 
-<div class="d-flex">
-        <table class="table table-responsive border fw-bold">
-            <thead>
+    <h2>Role List</h2>
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="fw-bold">
                 <tr>
-                    <th>Role Name</th>
-                    <th></th>
+                    <th class="text-start">Name</th>
+                    <th class="text-end">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var role in Model.Roles)
                 {
                     <tr>
-                        <td>@role.Name</td>
+                        <td class="text-start">@role.Name</td>
                         <td class="text-end">
-                            <button class="btn btn-outline-info btn-sm"><i class="bi bi-pencil-square"></i></button>
-                            &nbsp;
-                            <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                            <button class="btn btn-outline-info btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#updateRoleModal"
+                                    data-id="@role.Id"
+                                    data-name="@role.Name">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
-</div>
+    </div>
+
+    <partial name="_UpdateRoleModal" />
+
+    @section Scripts {
+        <script>
+            const updateModal = document.getElementById('updateRoleModal');
+            updateModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const id = button.getAttribute('data-id');
+                const name = button.getAttribute('data-name');
+
+                document.getElementById('Id').value = id;
+                    document.getElementById('Name').value = name;
+            });
+        </script>
+    }
 }
+

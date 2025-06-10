@@ -12,6 +12,7 @@ namespace Qtec.AccountManagement.Domain.RepositoryContracts
         Task<bool> IsRoleNameTakenAsync(string Name);
         Task CreateRoleAsync(Role role);
         Task<IEnumerable<Role>> GetAllRolesAsync();
+        Task UpdateRoleAsync(Role role);
 
     }
 }
