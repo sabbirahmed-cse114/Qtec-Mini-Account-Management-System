@@ -4,7 +4,19 @@
 
     ViewData["Title"] = "Role List";
 
-    <h2>Role List</h2>
+    <div class="d-flex justify-content-start">
+        <h2>Role List</h2>
+    </div>
+    <div class="d-flex justify-content-end mb-3">
+        <a asp-page="/Roles/CreateRole" class="btn btn-outline-info btn-sm">➕ Add Role</a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
 
     <div class="table-responsive">
         <table class="table table-hover">
@@ -27,6 +39,12 @@
                                     data-name="@role.Name">
                                 <i class="bi bi-pencil-square"></i>
                             </button>
+                            <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteRoleModal"
+                                    onclick="setDeleteRoleId('@role.Id')">
+                                <i class="bi bi-trash"></i>
+                            </button>
                         </td>
                     </tr>
                 }
@@ -35,6 +53,8 @@
     </div>
 
     <partial name="_UpdateRoleModal" />
+    <partial name="_DeleteRoleModal" model="Guid.Empty" />
+    <partial name="_ValidationScriptsPartial" />
 
     @section Scripts {
         <script>
@@ -48,6 +68,10 @@
                     document.getElementById('Name').value = name;
             });
         </script>
+        <script>
+            function setDeleteRoleId(roleId) {
+                document.getElementById('deleteRoleId').value = roleId;
+            }
+        </script>
     }
 }
-

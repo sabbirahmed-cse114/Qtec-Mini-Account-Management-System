@@ -51,9 +51,17 @@ namespace Qtec.AccountManagement.Application.Services
 
             await _unitOfWork.Roles.UpdateRoleAsync(role);
             await _unitOfWork.CommitAsync();
-
             return true;
         }
 
+        public async Task<bool> DeleteRoleAsync(Guid Id)
+        {
+            if (Id == Guid.Empty)
+                return false;
+
+            await _unitOfWork.Roles.DeleteRoleAsync(Id);
+            await _unitOfWork.CommitAsync();
+            return true;
+        }
     }
 }

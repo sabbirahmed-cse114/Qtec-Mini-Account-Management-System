@@ -73,5 +73,16 @@ namespace Qtec.AccountManagement.Infrastructure.Repositories
 
             await cmd.ExecuteNonQueryAsync();
         }
+
+        public async Task DeleteRoleAsync(Guid Id)
+        {
+            var cmd = new SqlCommand("sp_DeleteRoleById", _connection, _transaction)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Parameters.AddWithValue("@Id", Id);
+            await cmd.ExecuteNonQueryAsync();
+        }
+
     }
 }

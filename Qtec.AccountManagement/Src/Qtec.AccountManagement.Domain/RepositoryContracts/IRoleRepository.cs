@@ -13,6 +13,6 @@ namespace Qtec.AccountManagement.Domain.RepositoryContracts
         Task CreateRoleAsync(Role role);
         Task<IEnumerable<Role>> GetAllRolesAsync();
         Task UpdateRoleAsync(Role role);
-
+        Task DeleteRoleAsync(Guid roleId);
     }
 }
