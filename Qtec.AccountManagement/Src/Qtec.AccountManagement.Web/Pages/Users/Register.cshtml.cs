@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Qtec.AccountManagement.Application.Services;
 
-namespace Qtec.AccountManagement.Web.Pages.Account
+namespace Qtec.AccountManagement.Web.Pages.Users
 {
     public class RegisterModel : PageModel
     {
@@ -16,8 +16,8 @@ namespace Qtec.AccountManagement.Web.Pages.Account
         public string Name { get; set; } = string.Empty;
         [BindProperty]
         public string Email { get; set; } = string.Empty;
-        [BindProperty] 
-        public string Password { get; set; } = string.Empty;        
+        [BindProperty]
+        public string Password { get; set; } = string.Empty;
 
         public string ErrorMessage { get; set; } = "";
 

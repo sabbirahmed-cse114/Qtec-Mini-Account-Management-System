@@ -4,7 +4,6 @@ using Qtec.AccountManagement.Domain;
 using Qtec.AccountManagement.Domain.RepositoryContracts;
 using Qtec.AccountManagement.Infrastructure.Repositories;
 using Qtec.AccountManagement.Infrastructure.UnitOfWorks;
-using Qtec.AccountManagement.Web.Pages.Account;
 using System.Data.SqlClient;
 
 namespace Qtec.AccountManagement.Web

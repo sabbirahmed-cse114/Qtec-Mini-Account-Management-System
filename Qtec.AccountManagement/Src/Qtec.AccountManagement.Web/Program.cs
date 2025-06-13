@@ -44,12 +44,12 @@ try
     builder.Services.AddAuthentication("MyCookieAuth")
     .AddCookie("MyCookieAuth", options =>
     {
-        options.LoginPath = "/Account/Login";
-        options.LogoutPath = "/Account/Logout";
+        options.LoginPath = "/Identity/Login";
+        options.LogoutPath = "/Identity/Logout";
     });
 
 
-    builder.Services.AddAuthorization(); // ???? simple ????
+    builder.Services.AddAuthorization();
 
 
     var app = builder.Build();

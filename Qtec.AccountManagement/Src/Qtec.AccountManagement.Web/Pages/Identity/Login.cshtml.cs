@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Qtec.AccountManagement.Application.Services;
 using System.Security.Claims;
 
-namespace Qtec.AccountManagement.Web.Pages.Account
+namespace Qtec.AccountManagement.Web.Pages.Identity
 {
     public class LoginModel : PageModel
     {
@@ -43,7 +43,7 @@ namespace Qtec.AccountManagement.Web.Pages.Account
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.Name),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, "Admin") // Future Enhancement
+                new Claim(ClaimTypes.Role, "Admin")
             };
             var identity = new ClaimsIdentity(claims, "MyCookieAuth");
             var principal = new ClaimsPrincipal(identity);
