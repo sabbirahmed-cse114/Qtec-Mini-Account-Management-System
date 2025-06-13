@@ -1,3 +1,6 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Qtec.AccountManagement.Web;
 using Serilog;
 using Serilog.Events;
 
@@ -26,8 +29,28 @@ try
         .ReadFrom.Configuration(builder.Configuration));
     #endregion
 
+    var connectionString = configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+    #region AutoFac
+    builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+    builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+    {
+        containerBuilder.RegisterModule(new WebModule(connectionString));
+    });
+    #endregion
+
 
     builder.Services.AddRazorPages();
+    builder.Services.AddAuthentication("MyCookieAuth")
+    .AddCookie("MyCookieAuth", options =>
+    {
+        options.LoginPath = "/Account/Login";
+        options.LogoutPath = "/Account/Logout";
+    });
+
+
+    builder.Services.AddAuthorization(); // ???? simple ????
+
 
     var app = builder.Build();
 
@@ -41,7 +64,7 @@ try
     app.UseStaticFiles();
 
     app.UseRouting();
-
+    app.UseAuthentication();
     app.UseAuthorization();
 
     app.MapRazorPages();

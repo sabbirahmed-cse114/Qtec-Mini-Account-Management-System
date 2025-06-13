@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "Qtec.AccountManagement.Application/1.0.0": {
+        "dependencies": {
+          "Qtec.AccountManagement.Domain": "1.0.0"
+        },
         "runtime": {
           "Qtec.AccountManagement.Application.dll": {}
+        }
+      },
+      "Qtec.AccountManagement.Domain/1.0.0": {
+        "runtime": {
+          "Qtec.AccountManagement.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "Qtec.AccountManagement.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Qtec.AccountManagement.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

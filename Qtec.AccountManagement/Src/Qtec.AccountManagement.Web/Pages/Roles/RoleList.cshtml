@@ -1,0 +1,77 @@
+﻿@page
+@model Qtec.AccountManagement.Web.Pages.Roles.RoleListModel
+@{
+
+    ViewData["Title"] = "Role List";
+
+    <div class="d-flex justify-content-start">
+        <h2>Role List</h2>
+    </div>
+    <div class="d-flex justify-content-end mb-3">
+        <a asp-page="/Roles/CreateRole" class="btn btn-outline-info btn-sm">➕ Add Role</a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="fw-bold">
+                <tr>
+                    <th class="text-start">Name</th>
+                    <th class="text-end">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var role in Model.Roles)
+                {
+                    <tr>
+                        <td class="text-start">@role.Name</td>
+                        <td class="text-end">
+                            <button class="btn btn-outline-info btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#updateRoleModal"
+                                    data-id="@role.Id"
+                                    data-name="@role.Name">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteRoleModal"
+                                    onclick="setDeleteRoleId('@role.Id')">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <partial name="_UpdateRoleModal" />
+    <partial name="_DeleteRoleModal" model="Guid.Empty" />
+    <partial name="_ValidationScriptsPartial" />
+
+    @section Scripts {
+        <script>
+            const updateModal = document.getElementById('updateRoleModal');
+            updateModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const id = button.getAttribute('data-id');
+                const name = button.getAttribute('data-name');
+
+                document.getElementById('Id').value = id;
+                    document.getElementById('Name').value = name;
+            });
+        </script>
+        <script>
+            function setDeleteRoleId(roleId) {
+                document.getElementById('deleteRoleId').value = roleId;
+            }
+        </script>
+    }
+}

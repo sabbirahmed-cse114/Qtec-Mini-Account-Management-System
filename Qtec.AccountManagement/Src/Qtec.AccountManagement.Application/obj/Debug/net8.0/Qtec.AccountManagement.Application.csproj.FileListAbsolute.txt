@@ -10,3 +10,7 @@ C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec
 C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Application\obj\Debug\net8.0\refint\Qtec.AccountManagement.Application.dll
 C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Application\obj\Debug\net8.0\Qtec.AccountManagement.Application.pdb
 C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Application\obj\Debug\net8.0\ref\Qtec.AccountManagement.Application.dll
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Application\bin\Debug\net8.0\Qtec.AccountManagement.Domain.dll
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Application\bin\Debug\net8.0\Qtec.AccountManagement.Domain.pdb
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Application\obj\Debug\net8.0\Qtec.AccountManagement.Application.csproj.AssemblyReference.cache
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Application\obj\Debug\net8.0\Qtec.Acc.5D8086FB.Up2Date
