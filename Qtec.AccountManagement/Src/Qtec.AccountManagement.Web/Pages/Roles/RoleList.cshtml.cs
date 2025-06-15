@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Qtec.AccountManagement.Application.Services;
@@ -5,6 +6,7 @@ using Qtec.AccountManagement.Domain.Entities;
 
 namespace Qtec.AccountManagement.Web.Pages.Roles
 {
+    [Authorize]
     public class RoleListModel : PageModel
     {
         private readonly RoleManagementService _roleManagementService;

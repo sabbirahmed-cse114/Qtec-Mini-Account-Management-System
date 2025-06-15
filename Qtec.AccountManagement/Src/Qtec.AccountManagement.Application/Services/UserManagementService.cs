@@ -1,4 +1,5 @@
 ﻿using Qtec.AccountManagement.Domain;
+using Qtec.AccountManagement.Domain.Dtos;
 using Qtec.AccountManagement.Domain.Entities;
 using System.Security.Cryptography;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Qtec.AccountManagement.Application.Services
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<bool> RegistrationAsync(string name, string email, string password)
+        public async Task<bool> RegistrationAsync(string name, string email, string password, Guid rollId)
         {
             if (await _unitOfWork.Users.IsEmailTakenAsync(email))
                 return false;
@@ -23,13 +24,31 @@ namespace Qtec.AccountManagement.Application.Services
                     Id = Guid.NewGuid(),
                     Name = name,
                     Email = email,
-                    Password = HashPassword(password)
+                    Password = HashPassword(password),
+                    RoleId = rollId
                 };
 
-                await _unitOfWork.Users.RegisterAsync(user);
+                await _unitOfWork.Users.CreateNewUserAsync(user);
                 await _unitOfWork.CommitAsync();
                 return true;
         }
+
+        public Task<IEnumerable<UserDto>> GetUserAsync()
+        {
+            return _unitOfWork.Users.GetAllUserAsync();
+        }
+
+        public async Task<bool> ChangeUserRoleAsync(Guid userId, string roleName)
+        {
+            var roleId = await _unitOfWork.Roles.GetRoleIdByNameAsync(roleName);
+            if (roleId == Guid.Empty) return false;
+
+            await _unitOfWork.Users.ChangeUserRoleAsync(userId, roleId);
+            await _unitOfWork.CommitAsync();
+            return true;
+        }
+
+
 
         public async Task<User?> LoginAsync(string email, string password)
         {

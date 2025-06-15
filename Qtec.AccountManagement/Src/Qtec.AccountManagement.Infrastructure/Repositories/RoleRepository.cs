@@ -84,5 +84,22 @@ namespace Qtec.AccountManagement.Infrastructure.Repositories
             await cmd.ExecuteNonQueryAsync();
         }
 
+        public async Task<Guid> GetRoleIdByNameAsync(string roleName)
+        {
+            var cmd = new SqlCommand("sp_GetRoleIdByName", _connection, _transaction)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Parameters.AddWithValue("@Name", roleName);
+
+            var result = await cmd.ExecuteScalarAsync();
+            if (result != null && Guid.TryParse(result.ToString(), out Guid roleId))
+            {
+                return roleId;
+            }
+            return Guid.Empty;
+        }
+
+
     }
 }

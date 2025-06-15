@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\users\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\users\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\users\\userlist.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\users\\userlist.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.web\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC9104A3-F3D9-4FA8-ACA0-8B8D428B704A}|Src\\Qtec.AccountManagement.Web\\Qtec.AccountManagement.Web.csproj|solutionrelative:src\\qtec.accountmanagement.web\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}|Src\\Qtec.AccountManagement.Infrastructure\\Qtec.AccountManagement.Infrastructure.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8D0B38-D5F0-4105-B966-53D0DD776EE9}|Src\\Qtec.AccountManagement.Infrastructure\\Qtec.AccountManagement.Infrastructure.csproj|solutionrelative:src\\qtec.accountmanagement.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5420D07-B883-4C1A-AFBE-03E864E3581D}|Src\\Qtec.AccountManagement.Domain\\Qtec.AccountManagement.Domain.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.domain\\repositorycontracts\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5420D07-B883-4C1A-AFBE-03E864E3581D}|Src\\Qtec.AccountManagement.Domain\\Qtec.AccountManagement.Domain.csproj|solutionrelative:src\\qtec.accountmanagement.domain\\repositorycontracts\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}|Src\\Qtec.AccountManagement.Application\\Qtec.AccountManagement.Application.csproj|c:\\users\\sabbi\\desktop\\account-management-system\\qtec.accountmanagement\\src\\qtec.accountmanagement.application\\services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC9F6B8-15C5-4FB7-A923-F679ECC68851}|Src\\Qtec.AccountManagement.Application\\Qtec.AccountManagement.Application.csproj|solutionrelative:src\\qtec.accountmanagement.application\\services\\usermanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserList.cshtml",
-              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Users\\UserList.cshtml",
-              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Users\\UserList.cshtml",
-              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Users\\UserList.cshtml",
-              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Users\\UserList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T12:58:00.179Z",
+              "Title": "UserList.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Users\\UserList.cshtml.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Users\\UserList.cshtml.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Users\\UserList.cshtml.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Users\\UserList.cshtml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T19:55:49.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Domain\\RepositoryContracts\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Domain\\RepositoryContracts\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Domain\\RepositoryContracts\\IUserRepository.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Domain\\RepositoryContracts\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T18:19:19.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Src\\Qtec.AccountManagement.Web\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T12:54:36.857Z",
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T17:43:38.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Application\\Services\\UserManagementService.cs",
+              "RelativeDocumentMoniker": "Src\\Qtec.AccountManagement.Application\\Services\\UserManagementService.cs",
+              "ToolTip": "C:\\Users\\sabbi\\Desktop\\Account-Management-System\\Qtec.AccountManagement\\Src\\Qtec.AccountManagement.Application\\Services\\UserManagementService.cs",
+              "RelativeToolTip": "Src\\Qtec.AccountManagement.Application\\Services\\UserManagementService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAUwDAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T17:39:38.822Z",
               "EditorCaption": ""
             }
           ]

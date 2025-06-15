@@ -1,4 +1,5 @@
-﻿using Qtec.AccountManagement.Domain.Entities;
+﻿using Qtec.AccountManagement.Domain.Dtos;
+using Qtec.AccountManagement.Domain.Entities;
 
 namespace Qtec.AccountManagement.Domain.RepositoryContracts
 {
@@ -6,6 +7,8 @@ namespace Qtec.AccountManagement.Domain.RepositoryContracts
     {
         Task<User?> ValidateUserAsync(string email, string password);
         Task<bool> IsEmailTakenAsync(string email);
-        Task RegisterAsync(User user);
+        Task CreateNewUserAsync(User user);
+        Task<IEnumerable<UserDto>> GetAllUserAsync();
+        Task<bool> ChangeUserRoleAsync(Guid userId, Guid roleId);
     }
 }

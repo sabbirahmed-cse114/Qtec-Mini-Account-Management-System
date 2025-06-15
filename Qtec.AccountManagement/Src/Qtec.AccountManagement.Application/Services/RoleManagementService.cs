@@ -58,7 +58,6 @@ namespace Qtec.AccountManagement.Application.Services
         {
             if (Id == Guid.Empty)
                 return false;
-
             await _unitOfWork.Roles.DeleteRoleAsync(Id);
             await _unitOfWork.CommitAsync();
             return true;

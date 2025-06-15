@@ -1,5 +1,68 @@
 ﻿@page
 @model Qtec.AccountManagement.Web.Pages.Users.UserListModel
 @{
+    ViewData["Title"] = "User List";
 
+    <h2 class="text-center mb-4">User List</h2>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="fw-bold">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th class="text-end">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td>@user.Name</td>
+                        <td>@user.Email</td>
+                        <td>@user.RoleName</td>
+                        <td class="text-end">
+                        <button type="button"
+                                class="btn btn-sm btn-outline-info"
+                                data-bs-toggle="modal"
+                                data-bs-target="#changeRoleModal"
+                                data-user-id="@user.Id"
+                                data-user-name="@user.Name"
+                                data-current-role="@user.RoleName">
+                                <i class="bi bi-pencil-square"></i>
+                        </button>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <partial name="_changeRoleModal" />
+    </div>
+
+    @section Scripts {
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var modal = document.getElementById('changeRoleModal');
+
+                modal.addEventListener('show.bs.modal', function (event) {
+                    var button = event.relatedTarget;
+
+                    var userId = button.getAttribute('data-user-id');
+                    var userName = button.getAttribute('data-user-name');
+                    var currentRole = button.getAttribute('data-current-role');
+
+                    modal.querySelector('#UserId').value = userId;
+                    modal.querySelector('#UserName').value = userName;
+                    modal.querySelector('#NewRole').value = currentRole;
+                });
+            });
+        </script>
+    }
 }
