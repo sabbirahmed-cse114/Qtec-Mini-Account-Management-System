@@ -102,5 +102,14 @@ namespace Qtec.AccountManagement.Infrastructure.Repositories
             return Convert.ToInt32(result) == 1;
         }
 
+        public async Task DeleteUserByIdAsync(Guid Id)
+        {
+            var cmd = new SqlCommand("sp_DeleteUserById", _connection, _transaction)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Parameters.AddWithValue("@Id", Id);
+            await cmd.ExecuteNonQueryAsync();
+        }
     }
 }

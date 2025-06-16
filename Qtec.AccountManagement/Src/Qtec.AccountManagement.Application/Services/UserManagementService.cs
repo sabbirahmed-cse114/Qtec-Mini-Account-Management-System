@@ -48,7 +48,14 @@ namespace Qtec.AccountManagement.Application.Services
             return true;
         }
 
-
+        public async Task<bool> DeleteUserAsync(Guid Id)
+        {
+            if (Id == Guid.Empty)
+                return false;
+            await _unitOfWork.Users.DeleteUserByIdAsync(Id);
+            await _unitOfWork.CommitAsync();
+            return true;
+        }
 
         public async Task<User?> LoginAsync(string email, string password)
         {

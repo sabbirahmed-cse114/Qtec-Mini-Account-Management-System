@@ -10,5 +10,6 @@ namespace Qtec.AccountManagement.Domain.RepositoryContracts
         Task CreateNewUserAsync(User user);
         Task<IEnumerable<UserDto>> GetAllUserAsync();
         Task<bool> ChangeUserRoleAsync(Guid userId, Guid roleId);
+        Task DeleteUserByIdAsync(Guid Id);
     }
 }

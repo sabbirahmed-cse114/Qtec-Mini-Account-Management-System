@@ -48,5 +48,11 @@ namespace Qtec.AccountManagement.Web.Pages.Users
             TempData["SuccessMessage"] = "Role changed successfully!";
             return RedirectToPage();
         }
+        public async Task<IActionResult> OnPostDeleteUserAsync(Guid Id)
+        {
+            await _userManagementService.DeleteUserAsync(Id);
+            TempData["SuccessMessage"] = "User deleted successfully.";
+            return RedirectToPage();
+        }
     }
 }
