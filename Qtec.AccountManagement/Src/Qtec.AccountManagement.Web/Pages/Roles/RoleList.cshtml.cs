@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -6,14 +7,16 @@ using Qtec.AccountManagement.Domain.Entities;
 
 namespace Qtec.AccountManagement.Web.Pages.Roles
 {
-    [Authorize]
     public class RoleListModel : PageModel
     {
+        private readonly IAuthorizationService _authorizationService;
         private readonly RoleManagementService _roleManagementService;
         private readonly ILogger<RoleListModel> _logger;
-        public RoleListModel(RoleManagementService roleManagementService, ILogger<RoleListModel> logger)
+        public RoleListModel(RoleManagementService roleManagementService, 
+            ILogger<RoleListModel> logger, IAuthorizationService authorizationService)
         {
             _roleManagementService = roleManagementService;
+            _authorizationService = authorizationService;
             _logger = logger;
         }
 
@@ -34,6 +37,12 @@ namespace Qtec.AccountManagement.Web.Pages.Roles
 
         public async Task<IActionResult> OnPostUpdateRoleAsync()
         {
+            var result = await _authorizationService.AuthorizeAsync(User, "Admin");
+
+            if (!result.Succeeded)
+            {
+                return RedirectToPage("/AccessDenied");
+            }
             var success = await _roleManagementService.UpdateRoleAsync(Id, Name);
 
             if (success)
@@ -46,6 +55,12 @@ namespace Qtec.AccountManagement.Web.Pages.Roles
 
         public async Task<IActionResult> OnPostDeleteRoleAsync(Guid Id)
         {
+            var result = await _authorizationService.AuthorizeAsync(User, "Admin");
+
+            if (!result.Succeeded)
+            {
+                return RedirectToPage("/AccessDenied");
+            }
             var success = await _roleManagementService.DeleteRoleAsync(Id);
             if (success)
             {

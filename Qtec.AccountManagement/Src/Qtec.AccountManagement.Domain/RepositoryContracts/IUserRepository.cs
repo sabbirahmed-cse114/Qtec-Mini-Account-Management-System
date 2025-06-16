@@ -5,7 +5,7 @@ namespace Qtec.AccountManagement.Domain.RepositoryContracts
 {
     public interface IUserRepository
     {
-        Task<User?> ValidateUserAsync(string email, string password);
+        Task<UserDto?> ValidateUserAsync(string email, string password);
         Task<bool> IsEmailTakenAsync(string email);
         Task CreateNewUserAsync(User user);
         Task<IEnumerable<UserDto>> GetAllUserAsync();

@@ -7,16 +7,20 @@ using Qtec.AccountManagement.Domain.Entities;
 
 namespace Qtec.AccountManagement.Web.Pages.Users
 {
-    [Authorize]
+    [Authorize(Roles = "Admin,Accountant,Member")]
     public class UserListModel : PageModel
     {
+        private readonly IAuthorizationService _authorizationService;
         private readonly UserManagementService _userManagementService;
         private readonly RoleManagementService _roleManagementService;
 
-        public UserListModel(UserManagementService userManagementService, RoleManagementService roleManagementService)
+        public UserListModel(UserManagementService userManagementService, 
+            RoleManagementService roleManagementService,
+            IAuthorizationService authorizationService)
         {
             _userManagementService = userManagementService;
             _roleManagementService = roleManagementService;
+            _authorizationService = authorizationService;
         }
 
         [BindProperty]
@@ -35,9 +39,15 @@ namespace Qtec.AccountManagement.Web.Pages.Users
             RoleNames = (await _roleManagementService.GetRoleAsync()).ToList();
         }
 
-        [Authorize]
         public async Task<IActionResult> OnPostChangeRoleAsync()
         {
+            var result = await _authorizationService.AuthorizeAsync(User, "Admin");
+
+            if (!result.Succeeded)
+            {
+                return RedirectToPage("/AccessDenied");
+            }
+
             if (UserId == Guid.Empty || string.IsNullOrWhiteSpace(NewRole))
             {
                 TempData["ErrorMessage"] = "Invalid user or role.";
@@ -48,8 +58,15 @@ namespace Qtec.AccountManagement.Web.Pages.Users
             TempData["SuccessMessage"] = "Role changed successfully!";
             return RedirectToPage();
         }
+
         public async Task<IActionResult> OnPostDeleteUserAsync(Guid Id)
         {
+            var result = await _authorizationService.AuthorizeAsync(User, "Admin");
+
+            if (!result.Succeeded)
+            {
+                return RedirectToPage("/AccessDenied");
+            }
             await _userManagementService.DeleteUserAsync(Id);
             TempData["SuccessMessage"] = "User deleted successfully.";
             return RedirectToPage();

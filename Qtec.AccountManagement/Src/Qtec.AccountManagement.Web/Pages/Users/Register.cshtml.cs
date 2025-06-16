@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Qtec.AccountManagement.Application.Services;
-using Qtec.AccountManagement.Domain.Entities;
 
 namespace Qtec.AccountManagement.Web.Pages.Users
 {
@@ -45,7 +44,7 @@ namespace Qtec.AccountManagement.Web.Pages.Users
             if (success)
             {
                 TempData["SuccessMessage"] = "User created successfully!";
-                return RedirectToPage("/Users/UserList");
+                return RedirectToPage("/Identity/Login");
             }
             Message = "Email already exists...";
             return Page();

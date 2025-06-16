@@ -57,11 +57,11 @@ namespace Qtec.AccountManagement.Application.Services
             return true;
         }
 
-        public async Task<User?> LoginAsync(string email, string password)
+        public async Task<UserDto?> LoginAsync(string email, string password)
         {
             var hashedPassword = HashPassword(password);
-            var user = await _unitOfWork.Users.ValidateUserAsync(email, hashedPassword);
-            return user;
+            var userDto = await _unitOfWork.Users.ValidateUserAsync(email, hashedPassword);
+            return userDto;
         }
 
         private string HashPassword(string password)

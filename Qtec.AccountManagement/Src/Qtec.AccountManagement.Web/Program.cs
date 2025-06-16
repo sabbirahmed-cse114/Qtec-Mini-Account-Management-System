@@ -41,11 +41,16 @@ try
 
 
     builder.Services.AddRazorPages();
+    builder.Services.AddAuthorization(options =>
+    {
+        options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
+    });
     builder.Services.AddAuthentication("MyCookieAuth")
     .AddCookie("MyCookieAuth", options =>
     {
         options.LoginPath = "/Identity/Login";
         options.LogoutPath = "/Identity/Logout";
+        options.AccessDeniedPath = "/AccessDenied";
     });
 
 

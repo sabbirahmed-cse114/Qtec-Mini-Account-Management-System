@@ -5,7 +5,7 @@ using Qtec.AccountManagement.Application.Services;
 
 namespace Qtec.AccountManagement.Web.Pages.Roles
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class CreateRoleModel : PageModel
     {
         private readonly RoleManagementService _roleManagementService;

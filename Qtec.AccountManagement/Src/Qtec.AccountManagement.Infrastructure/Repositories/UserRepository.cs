@@ -66,7 +66,7 @@ namespace Qtec.AccountManagement.Infrastructure.Repositories
             return users;
         }
 
-        public async Task<User?> ValidateUserAsync(string email, string password)
+        public async Task<UserDto?> ValidateUserAsync(string email, string password)
         {
             var cmd = new SqlCommand("sp_ValidateUserLogin", _connection, _transaction)
             {
@@ -78,12 +78,13 @@ namespace Qtec.AccountManagement.Infrastructure.Repositories
             using var reader = await cmd.ExecuteReaderAsync();
             if (await reader.ReadAsync())
             {
-                return new User
+                return new UserDto
                 {
                     Id = reader.GetGuid(0),
                     Name = reader.GetString(1),
                     Email = reader.GetString(2),
-                    Password = reader.GetString(3)
+                    Password = reader.GetString(3),
+                    RoleName = reader.GetString(4)
                 };
             }
             return null;
