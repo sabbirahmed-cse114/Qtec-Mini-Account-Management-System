@@ -11,11 +11,9 @@
         <label>Role Name</label>
         <input type="text" asp-for="Name" class="form-control" />
     </div>
-    <button type="submit" class="btn btn-primary">Create</button>
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <div class="alert alert-info mt-3">@Model.Message</div>
+    }
+    <button type="submit" class="btn btn-outline-info form-control">Create</button>
 </form>
-
-
-@if (!string.IsNullOrEmpty(Model.Message))
-{
-    <div class="alert alert-info mt-3">@Model.Message</div>
-}

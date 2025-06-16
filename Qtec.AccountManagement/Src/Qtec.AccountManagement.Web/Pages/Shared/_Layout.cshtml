@@ -29,15 +29,15 @@
                         {
                             <button class="btn btn-outline-info text-end">@User.Identity.Name</button>
                             <div class="d-flex"><p>&nbsp;&nbsp;</p></div>
-                            <form method="post" asp-page="/Account/Logout" class="d-inline">
+                            <form method="post" asp-page="/Identity/Logout" class="d-inline">
                                 <button type="submit" class="btn btn-outline-danger">Logout</button>
                             </form>
                         }
                         else
                         {
-                            <a asp-page="/Account/Login" class="btn btn-outline-primary">Login</a>
+                            <a asp-page="/Identity/Login" class="btn btn-outline-primary">Login</a>
                             <div class="d-flex"><p>&nbsp;&nbsp;</p></div>
-                            <a asp-page="/Account/Register" class="btn btn-outline-primary">Register</a>
+                            <a asp-page="/Users/Register" class="btn btn-outline-primary">Register</a>
                         }
                     </div>
                 </div>

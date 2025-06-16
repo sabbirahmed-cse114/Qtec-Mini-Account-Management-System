@@ -1,0 +1,28 @@
+﻿@page
+@model Qtec.AccountManagement.Web.Pages.Users.RegisterModel
+@{
+    <div class="text-center">
+        <h2>Register</h2>
+    </div>
+    <form method="post">
+        <div class="mb-3">
+            <label>Name</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Email</label>
+            <input asp-for="Email" class="form-control" placeholder="test@example.com" />
+        </div>
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <p style="color:red">@Model.Message</p>
+        }
+        <div class="mb-3">
+            <label>Password</label>
+            <input asp-for="Password" type="password" class="form-control" placeholder="******" />
+        </div>
+        <div class="mb-lg-5">
+            <button type="submit" class="btn btn-outline-info form-control fw-bolder">Register</button>
+        </div>
+    </form>
+}
