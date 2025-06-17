@@ -1,0 +1,14 @@
+﻿@model Qtec.AccountManagement.Domain.Dtos.AccountDto
+
+<li>
+    <strong>@Model.Name</strong> <span class="text-info">(@Model.Type)</span>
+    @if (Model.Children.Any())
+    {
+        <ul class="list-unstyled">
+            @foreach (var child in Model.Children)
+            {
+                @Html.Partial("_ChartTreeItem", child)
+            }
+        </ul>
+    }
+</li>

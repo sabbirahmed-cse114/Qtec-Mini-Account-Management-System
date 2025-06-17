@@ -25,9 +25,16 @@ namespace Qtec.AccountManagement.Web
                 .As<IUserRepository>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<AccountRepository>()
+                .As<IAccountRepository>()
+                .InstancePerLifetimeScope();
+
             builder.RegisterType<UnitOfWork>()
                 .As<IUnitOfWork>()
                 .WithParameter("connectionString", connectionString)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<AccountManagementService>()
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<UserManagementService>()
