@@ -15,10 +15,11 @@ namespace Qtec.AccountManagement.Application.Services
 
         public async Task<bool> CreateAccountAsync(string name, string type, Guid? parentId)
         {
-            if (string.IsNullOrWhiteSpace(name))
+            if ((string.IsNullOrWhiteSpace(name)) || (string.IsNullOrWhiteSpace(type)))
                 return false;
-            if (string.IsNullOrWhiteSpace(type))
+            if (await _unitOfWork.Accounts.IsAccountTakenAsync(name, parentId))
                 return false;
+
             var account = new Account
             {
                 Id = Guid.NewGuid(),
@@ -31,6 +32,7 @@ namespace Qtec.AccountManagement.Application.Services
             await _unitOfWork.CommitAsync();
             return true;
         }
+
 
         public Task<IEnumerable<AccountDto>> GetAllAccountsAsync()
         {

@@ -6,6 +6,7 @@ namespace Qtec.AccountManagement.Domain.RepositoryContracts
     public interface IAccountRepository
     {
         Task CreateAccountAsync(Account account);
+        Task<bool> IsAccountTakenAsync(string name, Guid? paretnId);
         Task<IEnumerable<AccountDto>> GetAllAccountAsync();
     }
 }

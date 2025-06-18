@@ -32,6 +32,20 @@ namespace Qtec.AccountManagement.Infrastructure.Repositories
             await cmd.ExecuteNonQueryAsync();
         }
 
+        public async Task<bool> IsAccountTakenAsync(string name, Guid? parentId)
+        {
+            var cmd = new SqlCommand("sp_ManageChartOfAccounts", _connection, _transaction)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Parameters.AddWithValue("@Action", "Exists");
+            cmd.Parameters.AddWithValue("@Name", name);
+            cmd.Parameters.AddWithValue("ParentId", parentId);
+
+            var result = await cmd.ExecuteScalarAsync();
+            return Convert.ToInt32(result) == 1;
+        }
+
         public async Task<IEnumerable<AccountDto>> GetAllAccountAsync()
         {
             var cmd = new SqlCommand("sp_ManageChartOfAccounts", _connection, _transaction)
