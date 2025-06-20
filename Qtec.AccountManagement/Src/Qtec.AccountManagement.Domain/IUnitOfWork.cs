@@ -6,6 +6,7 @@ namespace Qtec.AccountManagement.Domain
     {
         IUserRepository Users { get; }
         IRoleRepository Roles { get; }
+        IAccountRepository Accounts { get; }
         Task CommitAsync();
     }
 }

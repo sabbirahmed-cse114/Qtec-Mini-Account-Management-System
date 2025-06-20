@@ -22,10 +22,6 @@ namespace Qtec.AccountManagement.Web.Pages.Identity
         public string Password { get; set; } = string.Empty;
         public string? ErrorMessage { get; set; }
 
-        public void OnGet()
-        {
-        }
-
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)

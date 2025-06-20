@@ -39,7 +39,6 @@ try
     });
     #endregion
 
-
     builder.Services.AddRazorPages();
     builder.Services.AddAuthorization(options =>
     {
@@ -53,9 +52,7 @@ try
         options.AccessDeniedPath = "/AccessDenied";
     });
 
-
     builder.Services.AddAuthorization();
-
 
     var app = builder.Build();
 
@@ -67,13 +64,10 @@ try
 
     app.UseHttpsRedirection();
     app.UseStaticFiles();
-
     app.UseRouting();
     app.UseAuthentication();
     app.UseAuthorization();
-
     app.MapRazorPages();
-
     app.Run();
 }
 catch (Exception ex)

@@ -14,7 +14,7 @@ namespace Qtec.AccountManagement.Web.Pages.Users
         private readonly UserManagementService _userManagementService;
         private readonly RoleManagementService _roleManagementService;
 
-        public UserListModel(UserManagementService userManagementService, 
+        public UserListModel(UserManagementService userManagementService,
             RoleManagementService roleManagementService,
             IAuthorizationService authorizationService)
         {

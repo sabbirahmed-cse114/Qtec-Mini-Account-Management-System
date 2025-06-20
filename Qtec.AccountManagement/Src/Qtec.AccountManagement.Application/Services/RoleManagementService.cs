@@ -34,7 +34,7 @@ namespace Qtec.AccountManagement.Application.Services
             return _unitOfWork.Roles.GetAllRolesAsync();
         }
 
-        public async Task<bool> UpdateRoleAsync(Guid Id, string name)
+        public async Task<bool> UpdateRoleAsync(Guid id, string name)
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Role name cannot be empty");
@@ -45,7 +45,7 @@ namespace Qtec.AccountManagement.Application.Services
 
             var role = new Role
             {
-                Id = Id,
+                Id = id,
                 Name = name
             };
 

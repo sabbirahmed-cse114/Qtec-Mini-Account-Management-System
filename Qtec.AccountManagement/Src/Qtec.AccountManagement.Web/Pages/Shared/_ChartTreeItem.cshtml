@@ -1,0 +1,25 @@
+﻿@model Qtec.AccountManagement.Domain.Dtos.AccountDto
+<li>
+    <input type="checkbox"
+           class="account-checkbox"
+           style="display:none;"
+           disabled />
+
+    <strong>@Model.Name</strong>
+    <span class="text-info">(@Model.Type)</span>
+
+    <span class="action-buttons" style="display:none;">
+        <button class="btn btn-sm btn-outline-info" onclick="updateAccount('@Model.Id')">Update</button>
+        <button class="btn btn-sm btn-outline-danger" onclick="openDeleteModal('account', '@Model.Id')">Delete</button>
+    </span>
+
+    @if (Model.Children != null && Model.Children.Any())
+    {
+        <ul class="list-unstyled">
+            @foreach (var child in Model.Children)
+            {
+                @Html.Partial("_ChartTreeItem", child)
+            }
+        </ul>
+    }
+</li>
