@@ -9,29 +9,41 @@ namespace Qtec.AccountManagement.Web.Pages.Roles
     public class CreateRoleModel : PageModel
     {
         private readonly RoleManagementService _roleManagementService;
+        private readonly ILogger<CreateRoleModel> _logger;
 
-        public CreateRoleModel(RoleManagementService roleManagementService)
+        public CreateRoleModel(RoleManagementService roleManagementService, 
+            ILogger<CreateRoleModel> logger)
         {
             _roleManagementService = roleManagementService;
+            _logger = logger;
         }
 
         [BindProperty]
         public string Name { get; set; }
 
-        public string Message { get; set; }
-
         public async Task<IActionResult> OnPostAsync()
         {
-            var success = await _roleManagementService.CreateRoleAsync(Name);
-
-            if (success)
+            try
             {
-                TempData["SuccessMessage"] = "Role created successfully!";
-                return RedirectToPage("/Roles/RoleList");
-            }
+                if (ModelState.IsValid)
+                {
+                    var success = await _roleManagementService.CreateRoleAsync(Name);
 
-            Message = "Role name already exists.";
-            return Page();
+                    if (success)
+                    {
+                        TempData["SuccessMessage"] = "Role created successfully!";
+                        return RedirectToPage("/Roles/RoleList");
+                    }
+                    TempData["ErrorMessage"] = "Role name already exists.";
+                    return Page();
+                }
+                return Page();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex, "Failed to create Roll....");
+                return RedirectToPage("/Error");
+            }
         }
     }
 }

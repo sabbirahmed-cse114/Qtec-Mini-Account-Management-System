@@ -25,47 +25,74 @@ namespace Qtec.AccountManagement.Web.Pages.Roles
         [BindProperty]
         public string Name { get; set; } = default!;
 
-        public string Message { get; set; }
-
         public IEnumerable<Role> Roles { get; set; } = new List<Role>();
 
         public async Task OnGetAsync()
         {
-            Roles = await _roleManagementService.GetRoleAsync();
+            try
+            {
+                Roles = await _roleManagementService.GetRoleAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex, "Failed to load  Role List...");
+            }
         }
 
         public async Task<IActionResult> OnPostUpdateRoleAsync()
         {
-            var result = await _authorizationService.AuthorizeAsync(User, "Admin");
-
-            if (!result.Succeeded)
+            try
             {
-                return RedirectToPage("/AccessDenied");
-            }
-            var success = await _roleManagementService.UpdateRoleAsync(Id, Name);
+                if (ModelState.IsValid)
+                {
+                    var result = await _authorizationService.AuthorizeAsync(User, "Admin");
 
-            if (success)
-            {
-                TempData["SuccessMessage"] = "Role updated successfully.";
+                    if (!result.Succeeded)
+                    {
+                        return RedirectToPage("/AccessDenied");
+                    }
+                    var success = await _roleManagementService.UpdateRoleAsync(Id, Name);
+
+                    if (success)
+                    {
+                        TempData["SuccessMessage"] = "Role updated successfully.";
+                        return RedirectToPage("/Roles/RoleList");
+                    }
+                    TempData["ErrorMessage"] = "Failed to delete role.";
+                    return RedirectToPage("/Roles/RoleList");
+                }
+                return RedirectToPage("/Roles/RoleList");
             }
-            return RedirectToPage();
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex, "Failed to update role...");
+                return RedirectToPage("/Error");
+            }
         }
-
-
         public async Task<IActionResult> OnPostDeleteRoleAsync(Guid Id)
         {
-            var result = await _authorizationService.AuthorizeAsync(User, "Admin");
+            try
+            {
+                var result = await _authorizationService.AuthorizeAsync(User, "Admin");
 
-            if (!result.Succeeded)
-            {
-                return RedirectToPage("/AccessDenied");
+                if (!result.Succeeded)
+                {
+                    return RedirectToPage("/AccessDenied");
+                }
+                var success = await _roleManagementService.DeleteRoleAsync(Id);
+                if (success)
+                {
+                    TempData["SuccessMessage"] = "Role deleted successfully.";
+                    return RedirectToPage("/Roles/RoleList");
+                }
+                TempData["ErrorMessage"] = "Failed to delete role.";
+                return RedirectToPage("/Roles/RoleList");
             }
-            var success = await _roleManagementService.DeleteRoleAsync(Id);
-            if (success)
+            catch (Exception ex)
             {
-                TempData["SuccessMessage"] = "Role deleted successfully.";
+                _logger.LogInformation(ex, "Failed to delete role...");
+                return RedirectToPage("/Error");
             }
-            return RedirectToPage();
         }
     }
 }

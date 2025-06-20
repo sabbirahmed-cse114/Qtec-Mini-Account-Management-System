@@ -8,10 +8,13 @@ namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
     public class CreateAccountModel : PageModel
     {
         private readonly AccountManagementService _accountManagementService;
+        private readonly ILogger<CreateAccountModel> _logger;
 
-        public CreateAccountModel(AccountManagementService accountManagementService)
+        public CreateAccountModel(AccountManagementService accountManagementService,
+            ILogger<CreateAccountModel> logger)
         {
             _accountManagementService = accountManagementService;
+            _logger = logger;
         }
 
         [BindProperty]
@@ -27,19 +30,38 @@ namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
 
         public async Task OnGetAsync()
         {
-            AllAccounts = (await _accountManagementService.GetAllAccountsAsync()).ToList();
+            try
+            {
+                AllAccounts = (await _accountManagementService.GetAllAccountsAsync()).ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex, "Failed to create account...");
+            }
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
-            var success = await _accountManagementService.CreateAccountAsync(Name, Type, ParentId);
-            if (success)
+            try
             {
-                TempData["SuccessMessage"] = "Account created successfully!";
-                return RedirectToPage("/ChartsOfAccounts/ChartTree");
+                if (ModelState.IsValid)
+                {
+                    var success = await _accountManagementService.CreateAccountAsync(Name, Type, ParentId);
+                    if (success)
+                    {
+                        TempData["SuccessMessage"] = "Account created successfully!";
+                        return RedirectToPage("/ChartsOfAccounts/ChartTree");
+                    }
+                    TempData["ErrorMessage"] = "Failed to create account.";
+                    return Page();
+                }
+                return Page();
             }
-            TempData["ErrorMessage"] = "Failed to create account.";
-            return RedirectToPage("/ChartsOfAccounts/CreateAccount");            
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex, "Failed to create account...");
+                return RedirectToAction("/Error");
+            }
         }
     }
 }

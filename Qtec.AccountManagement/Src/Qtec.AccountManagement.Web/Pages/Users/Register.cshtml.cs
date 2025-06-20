@@ -9,45 +9,59 @@ namespace Qtec.AccountManagement.Web.Pages.Users
     {
         private readonly UserManagementService _userManagementService;
         private readonly RoleManagementService _roleManagementService;
-        public RegisterModel(UserManagementService userManagementService, RoleManagementService roleManagementService)
+        private readonly ILogger<RegisterModel> _logger;
+        public RegisterModel(UserManagementService userManagementService, 
+            RoleManagementService roleManagementService,
+            ILogger<RegisterModel> logger)
         {
             _userManagementService = userManagementService;
             _roleManagementService = roleManagementService;
+            _logger = logger;
         }
 
         [BindProperty]
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; }
         [BindProperty]
-        public string Email { get; set; } = string.Empty;
+        public string Email { get; set; }
         [BindProperty]
-        public string Password { get; set; } = string.Empty;
+        public string Password { get; set; }
         [BindProperty]
         public Guid RoleId { get; set; }
         public List<SelectListItem> RoleList { get; set; }
 
-        public string Message { get; set; } = "";
-
         public async Task<IActionResult> OnPostAsync()
         {
-            var RoleNames = await _roleManagementService.GetRoleAsync();
-            foreach (var role in RoleNames)
+            try
             {
-                if (role.Name == "Viewer")
+                if (ModelState.IsValid)
                 {
-                    RoleId = role.Id;
-                    break;
+                    var RoleNames = await _roleManagementService.GetRoleAsync();
+                    foreach (var role in RoleNames)
+                    {
+                        if (role.Name == "Viewer")
+                        {
+                            RoleId = role.Id;
+                            break;
+                        }
+                    }
+
+                    var success = await _userManagementService.RegistrationAsync(Name, Email, Password, RoleId);
+
+                    if (success)
+                    {
+                        TempData["SuccessMessage"] = "User created successfully!";
+                        return RedirectToPage("/Identity/Login");
+                    }
+                    TempData["ErrorMessage"] = "Email already exists...";
+                    return Page();
                 }
+                return Page();
             }
-
-            var success = await _userManagementService.RegistrationAsync(Name, Email, Password, RoleId);
-
-            if (success)
+            catch (Exception ex)
             {
-                TempData["SuccessMessage"] = "User created successfully!";
-                return RedirectToPage("/Identity/Login");
+                _logger.LogInformation(ex, "Failed to user registration...");
+                return RedirectToPage("/Error");
             }
-            Message = "Email already exists...";
-            return Page();
         }
     }
 }

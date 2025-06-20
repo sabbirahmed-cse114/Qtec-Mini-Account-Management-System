@@ -11,6 +11,7 @@
                     <div class="mb-3">
                         <label for="UpdateRoleName" class="form-label">Name</label>
                         <input type="text" name="Name" id="Name" class="form-control" required />
+                        <span validation-for="Name" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -20,3 +21,7 @@
         </div>
     </div>
 </form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

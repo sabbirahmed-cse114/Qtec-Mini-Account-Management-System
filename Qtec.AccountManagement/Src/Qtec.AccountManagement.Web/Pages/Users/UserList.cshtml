@@ -9,6 +9,12 @@
     {
         <div class="alert alert-success">@TempData["SuccessMessage"]</div>
     }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
 
     <div class="table-responsive">
         <table class="table table-hover">
@@ -35,11 +41,11 @@
                                     data-user-id="@user.Id"
                                     data-user-name="@user.Name"
                                     data-current-role="@user.RoleName">
-                                <i class="bi bi-pencil-square"></i>
+                                    <i class="bi bi-pencil-square"></i>
                             </button>
                             <button class="btn btn-outline-danger btn-sm"
                                     onclick="openDeleteModal('user', '@user.Id')">
-                                <i class="bi bi-trash"></i>
+                                    <i class="bi bi-trash"></i>
                             </button>
                         </td>
                     </tr>
@@ -68,20 +74,20 @@
                 });
             });
 
-                function openDeleteModal(type, id) {
-                    const form = document.getElementById('deleteForm');
-                    const title = document.getElementById('deleteModalTitle');
-                    const body = document.getElementById('deleteModalBody');
-                    const input = document.getElementById('deleteId');
+            function openDeleteModal(type, id) {
+                const form = document.getElementById('deleteForm');
+                const title = document.getElementById('deleteModalTitle');
+                const body = document.getElementById('deleteModalBody');
+                const input = document.getElementById('deleteId');
 
-                    input.value = id;
+                input.value = id;
 
-                    title.innerText = "Delete User";
-                    body.innerText = "Do you want to delete this user?";
-                    form.action = '?handler=DeleteUser';
+                title.innerText = "Delete User";
+                body.innerText = "Do you want to delete this user?";
+                form.action = '?handler=DeleteUser';
 
-                    const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
-                    modal.show();
+                const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
+                modal.show();
             }
         </script>
     }
