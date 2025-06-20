@@ -9,10 +9,14 @@ namespace Qtec.AccountManagement.Web.Pages.Users
     {
         private readonly UserManagementService _userManagementService;
         private readonly RoleManagementService _roleManagementService;
-        public RegisterModel(UserManagementService userManagementService, RoleManagementService roleManagementService)
+        private readonly ILogger<RegisterModel> _logger;
+        public RegisterModel(UserManagementService userManagementService, 
+            RoleManagementService roleManagementService,
+            ILogger<RegisterModel> logger)
         {
             _userManagementService = userManagementService;
             _roleManagementService = roleManagementService;
+            _logger = logger;
         }
 
         [BindProperty]
@@ -27,29 +31,37 @@ namespace Qtec.AccountManagement.Web.Pages.Users
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (ModelState.IsValid)
+            try
             {
-                var RoleNames = await _roleManagementService.GetRoleAsync();
-                foreach (var role in RoleNames)
+                if (ModelState.IsValid)
                 {
-                    if (role.Name == "Viewer")
+                    var RoleNames = await _roleManagementService.GetRoleAsync();
+                    foreach (var role in RoleNames)
                     {
-                        RoleId = role.Id;
-                        break;
+                        if (role.Name == "Viewer")
+                        {
+                            RoleId = role.Id;
+                            break;
+                        }
                     }
-                }
 
-                var success = await _userManagementService.RegistrationAsync(Name, Email, Password, RoleId);
+                    var success = await _userManagementService.RegistrationAsync(Name, Email, Password, RoleId);
 
-                if (success)
-                {
-                    TempData["SuccessMessage"] = "User created successfully!";
-                    return RedirectToPage("/Identity/Login");
+                    if (success)
+                    {
+                        TempData["SuccessMessage"] = "User created successfully!";
+                        return RedirectToPage("/Identity/Login");
+                    }
+                    TempData["ErrorMessage"] = "Email already exists...";
+                    return Page();
                 }
-                TempData["ErrorMessage"] = "Email already exists...";
                 return Page();
             }
-            return Page();
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex, "Failed to user registration...");
+                return RedirectToPage("/Error");
+            }
         }
     }
 }

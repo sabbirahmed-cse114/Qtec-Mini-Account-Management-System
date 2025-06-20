@@ -9,10 +9,13 @@ namespace Qtec.AccountManagement.Web.Pages.Identity
     public class LoginModel : PageModel
     {
         private readonly UserManagementService _userManagementService;
+        private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(UserManagementService userManagementService)
+        public LoginModel(UserManagementService userManagementService,
+            ILogger<LoginModel> logger)
         {
             _userManagementService = userManagementService;
+            _logger = logger;
         }
 
         [BindProperty]
@@ -23,16 +26,18 @@ namespace Qtec.AccountManagement.Web.Pages.Identity
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (ModelState.IsValid)
+            try
             {
-                var user = await _userManagementService.LoginAsync(Email, Password);
-
-                if (user == null)
+                if (ModelState.IsValid)
                 {
-                    TempData["ErrorMessage"] = "Invalid email or password...";
-                    return Page();
-                }
-                var claims = new List<Claim>
+                    var user = await _userManagementService.LoginAsync(Email, Password);
+
+                    if (user == null)
+                    {
+                        TempData["ErrorMessage"] = "Invalid email or password...";
+                        return Page();
+                    }
+                    var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Name, user.Name),
@@ -40,12 +45,18 @@ namespace Qtec.AccountManagement.Web.Pages.Identity
                     new Claim(ClaimTypes.Role, user.RoleName)
                 };
 
-                var identity = new ClaimsIdentity(claims, "MyCookieAuth");
-                var principal = new ClaimsPrincipal(identity);
-                await HttpContext.SignInAsync("MyCookieAuth", principal);
-                return RedirectToPage("/Index");
+                    var identity = new ClaimsIdentity(claims, "MyCookieAuth");
+                    var principal = new ClaimsPrincipal(identity);
+                    await HttpContext.SignInAsync("MyCookieAuth", principal);
+                    return RedirectToPage("/Index");
+                }
+                return Page();
             }
-            return Page();
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex, "Failed to LogIn...");
+                return RedirectToPage("/Error");
+            }
         }
     }
 }

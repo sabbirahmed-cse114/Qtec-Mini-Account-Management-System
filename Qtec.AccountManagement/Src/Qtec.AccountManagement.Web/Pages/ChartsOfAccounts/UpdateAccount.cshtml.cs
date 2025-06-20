@@ -7,10 +7,14 @@ namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
 {
     public class UpdateAccountModel : PageModel
     {
-        public readonly AccountManagementService _accountManagementService;
-        public UpdateAccountModel(AccountManagementService accountManagementService)
+        private readonly AccountManagementService _accountManagementService;
+        private readonly ILogger<UpdateAccountModel> _logger;
+        
+        public UpdateAccountModel(AccountManagementService accountManagementService,
+            ILogger<UpdateAccountModel> logger)
         {
             _accountManagementService = accountManagementService;
+            _logger = logger;
         }
 
         [BindProperty]
@@ -27,49 +31,65 @@ namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
 
         public async Task<IActionResult> OnGetAsync(Guid id)
         {
-            var account = await _accountManagementService.GetAccountByIdAsync(id);
-            if (account == null)
+            try
             {
-                return NotFound();
-            }
-
-            Id = account.Id;
-            Name = account.Name;
-            Type = account.Type;
-            ParentName = account.ParentName;
-            AllAccounts = (await _accountManagementService.GetAllAccountsAsync()).ToList();
-            ExcludedChildAccountIds.Add(Id);
-
-            void FindChildAccount(Guid parentId)
-            {
-                foreach (var acc in AllAccounts)
+                var account = await _accountManagementService.GetAccountByIdAsync(id);
+                if (account == null)
                 {
-                    if (acc.ParentId == parentId)
+                    return NotFound();
+                }
+
+                Id = account.Id;
+                Name = account.Name;
+                Type = account.Type;
+                ParentName = account.ParentName;
+                AllAccounts = (await _accountManagementService.GetAllAccountsAsync()).ToList();
+                ExcludedChildAccountIds.Add(Id);
+
+                void FindChildAccount(Guid parentId)
+                {
+                    foreach (var acc in AllAccounts)
                     {
-                        ExcludedChildAccountIds.Add(acc.Id);
-                        FindChildAccount(acc.Id);
+                        if (acc.ParentId == parentId)
+                        {
+                            ExcludedChildAccountIds.Add(acc.Id);
+                            FindChildAccount(acc.Id);
+                        }
                     }
                 }
+                FindChildAccount(Id);
+                return Page();
             }
-            FindChildAccount(Id);
-            return Page();
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex, "Failed to get account by Id...");
+                return RedirectToPage("/Error");
+            }
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (string.IsNullOrWhiteSpace(Name) || string.IsNullOrWhiteSpace(Type))
+            try
             {
-                TempData["ErrorMessage"] = "Invalid account name or type.";
+                if (string.IsNullOrWhiteSpace(Name) || string.IsNullOrWhiteSpace(Type))
+                {
+                    TempData["ErrorMessage"] = "Invalid account name or type.";
+                    return Page();
+                }
+
+                var success = await _accountManagementService.UpdateAccountAsync(Id, Name, Type, ParentName);
+                if (success)
+                {
+                    TempData["SuccessMessage"] = "Account updated successfully.";
+                    return RedirectToPage("/ChartsOfAccounts/ChartTree");
+                }
                 return Page();
             }
-
-            var success = await _accountManagementService.UpdateAccountAsync(Id, Name, Type, ParentName);
-            if (success)
+            catch (Exception ex)
             {
-                TempData["SuccessMessage"] = "Account updated successfully.";
-                return RedirectToPage("/ChartsOfAccounts/ChartTree");
+                _logger.LogInformation(ex, "Failed to update account...");
+                return RedirectToPage("/Error");
             }
-            return Page();
         }
     }
 }
