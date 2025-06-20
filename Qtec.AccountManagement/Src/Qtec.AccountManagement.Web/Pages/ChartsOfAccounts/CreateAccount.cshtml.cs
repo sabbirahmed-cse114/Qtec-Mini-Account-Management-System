@@ -14,7 +14,6 @@ namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
             _accountManagementService = accountManagementService;
         }
 
-        public Guid Id { get; set; }
         [BindProperty]
         public string Name { get; set; }
 
@@ -31,7 +30,6 @@ namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
             AllAccounts = (await _accountManagementService.GetAllAccountsAsync()).ToList();
         }
 
-
         public async Task<IActionResult> OnPostAsync()
         {
             var success = await _accountManagementService.CreateAccountAsync(Name, Type, ParentId);
@@ -41,8 +39,7 @@ namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
                 return RedirectToPage("/ChartsOfAccounts/ChartTree");
             }
             TempData["ErrorMessage"] = "Failed to create account.";
-            return RedirectToPage("/ChartsOfAccounts/CreateAccount");
-            
+            return RedirectToPage("/ChartsOfAccounts/CreateAccount");            
         }
     }
 }

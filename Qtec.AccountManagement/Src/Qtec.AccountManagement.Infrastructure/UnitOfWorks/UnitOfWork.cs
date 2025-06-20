@@ -1,5 +1,4 @@
 ﻿using Qtec.AccountManagement.Domain;
-using Qtec.AccountManagement.Domain.Entities;
 using Qtec.AccountManagement.Domain.RepositoryContracts;
 using Qtec.AccountManagement.Infrastructure.Repositories;
 using System.Data.SqlClient;

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Qtec.AccountManagement.Domain.Dtos
+﻿namespace Qtec.AccountManagement.Domain.Dtos
 {
     public class UserDto
     {

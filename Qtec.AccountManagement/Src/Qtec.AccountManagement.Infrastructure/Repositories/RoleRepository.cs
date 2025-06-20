@@ -99,7 +99,5 @@ namespace Qtec.AccountManagement.Infrastructure.Repositories
             }
             return Guid.Empty;
         }
-
-
     }
 }

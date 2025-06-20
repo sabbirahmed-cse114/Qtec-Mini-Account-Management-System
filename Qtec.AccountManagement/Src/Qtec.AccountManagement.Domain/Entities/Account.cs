@@ -1,6 +1,4 @@
-﻿
-
-namespace Qtec.AccountManagement.Domain.Entities
+﻿namespace Qtec.AccountManagement.Domain.Entities
 {
     public class Account : IEntity<Guid>
     {

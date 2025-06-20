@@ -33,6 +33,5 @@ namespace Qtec.AccountManagement.Web.Pages.Roles
             Message = "Role name already exists.";
             return Page();
         }
-
     }
 }

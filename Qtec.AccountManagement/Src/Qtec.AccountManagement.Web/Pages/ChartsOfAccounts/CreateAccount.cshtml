@@ -18,7 +18,7 @@
             <label>Type</label>
             <input asp-for="Type" class="form-control" />
         </div>
-        <div class="mb-3">
+        <div class="mb-5">
             <label>Parent Account</label>
             <select class="form-control" name="ParentId">
                 <option value="">None</option>
@@ -28,6 +28,10 @@
                 }
             </select>
         </div>
-        <button type="submit" class="btn btn-outline-info mt-2 form-control">Create</button>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-info col-5">Create</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a asp-page="/ChartsOfAccounts/ChartTree" class="btn btn-outline-danger btn-sm col-5">Cancel</a>
+        </div>
     </form>
 }

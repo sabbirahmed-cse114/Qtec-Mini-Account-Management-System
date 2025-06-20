@@ -8,8 +8,7 @@ namespace Qtec.AccountManagement.Application.Services
 {
     public class UserManagementService : IUserManagementService
     {
-       private readonly IUnitOfWork _unitOfWork;
-
+        private readonly IUnitOfWork _unitOfWork;
         public UserManagementService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -19,18 +18,18 @@ namespace Qtec.AccountManagement.Application.Services
             if (await _unitOfWork.Users.IsEmailTakenAsync(email))
                 return false;
 
-                var user = new User
-                {
-                    Id = Guid.NewGuid(),
-                    Name = name,
-                    Email = email,
-                    Password = HashPassword(password),
-                    RoleId = rollId
-                };
+            var user = new User
+            {
+                Id = Guid.NewGuid(),
+                Name = name,
+                Email = email,
+                Password = HashPassword(password),
+                RoleId = rollId
+            };
 
-                await _unitOfWork.Users.CreateNewUserAsync(user);
-                await _unitOfWork.CommitAsync();
-                return true;
+            await _unitOfWork.Users.CreateNewUserAsync(user);
+            await _unitOfWork.CommitAsync();
+            return true;
         }
 
         public Task<IEnumerable<UserDto>> GetUserAsync()

@@ -1,5 +1,5 @@
-﻿using Qtec.AccountManagement.Domain.Dtos;
-using Qtec.AccountManagement.Domain.Entities;
+﻿using Qtec.AccountManagement.Domain.Entities;
+using Qtec.AccountManagement.Domain.Dtos;
 using Qtec.AccountManagement.Domain.RepositoryContracts;
 using System.Data;
 using System.Data.SqlClient;

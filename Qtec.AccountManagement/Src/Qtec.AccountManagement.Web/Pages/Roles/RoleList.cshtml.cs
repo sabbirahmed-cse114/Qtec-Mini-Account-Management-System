@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -12,7 +11,7 @@ namespace Qtec.AccountManagement.Web.Pages.Roles
         private readonly IAuthorizationService _authorizationService;
         private readonly RoleManagementService _roleManagementService;
         private readonly ILogger<RoleListModel> _logger;
-        public RoleListModel(RoleManagementService roleManagementService, 
+        public RoleListModel(RoleManagementService roleManagementService,
             ILogger<RoleListModel> logger, IAuthorizationService authorizationService)
         {
             _roleManagementService = roleManagementService;

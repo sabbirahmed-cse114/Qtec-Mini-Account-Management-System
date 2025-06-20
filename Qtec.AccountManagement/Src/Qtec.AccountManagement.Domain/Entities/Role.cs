@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Qtec.AccountManagement.Domain.Entities
+﻿namespace Qtec.AccountManagement.Domain.Entities
 {
     public class Role : IEntity<Guid>
     {

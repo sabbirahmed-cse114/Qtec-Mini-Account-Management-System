@@ -1,5 +1,4 @@
-﻿
-namespace Qtec.AccountManagement.Domain.Dtos
+﻿namespace Qtec.AccountManagement.Domain.Dtos
 {
     public class AccountDto
     {

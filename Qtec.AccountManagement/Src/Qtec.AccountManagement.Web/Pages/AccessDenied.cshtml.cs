@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Qtec.AccountManagement.Web.Pages
@@ -7,6 +6,7 @@ namespace Qtec.AccountManagement.Web.Pages
     {
         public void OnGet()
         {
+
         }
     }
 }

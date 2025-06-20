@@ -2,18 +2,24 @@
 @using Qtec.AccountManagement.Domain.Dtos
 @model Qtec.AccountManagement.Web.Pages.ChartsOfAccounts.ChartTreeModel
 
-<div class="d-flex justify-content-end">
-    <a asp-page="/ChartsOfAccounts/CreateAccount" class="btn btn-outline-info btn-sm">➕ Add Account</a>
+<div class="sticky-top d-flex justify-content-end">
+    <a asp-page="/ChartsOfAccounts/CreateAccount" class="btn btn-outline-info btn-sm">➕ Add Account</a>&nbsp;&nbsp;
+    <button class="btn btn-outline-info btn-sm" id="selectButton" onclick="enableSelection()">Select</button>
+    <button class="btn btn-outline-danger btn-sm" id="unselectButton" style="display:none;" onclick="disableSelection()">Unselect</button>
+
 </div>
-<div>
+
+<div class="mt-0">
     <h3 class="mb-3">Chart of Accounts</h3>
 </div>
+
 @if (TempData["SuccessMessage"] != null)
 {
     <div class="alert alert-success">
         @TempData["SuccessMessage"]
     </div>
 }
+
 <div class="treeview">
     <ul class="list-unstyled">
         @foreach (var item in Model.TreeView)
@@ -23,3 +29,76 @@
     </ul>
 </div>
 
+<partial name="_DeleteModal" />
+
+
+
+@section Scripts {
+    <script>
+        function enableSelection() {
+            document.getElementById('selectButton').style.display = 'none';
+            document.getElementById('unselectButton').style.display = 'inline-block';
+
+            const checkboxes = document.querySelectorAll('.account-checkbox');
+            checkboxes.forEach(cb => {
+                cb.style.display = 'inline-block';
+                cb.disabled = false;
+
+                cb.addEventListener('change', function () {
+                    checkboxes.forEach(other => {
+                        if (other !== cb) other.checked = false;
+                    });
+
+                    const actionButtons = document.querySelectorAll('.action-buttons');
+                    actionButtons.forEach(btn => btn.style.display = 'none');
+
+                    if (cb.checked) {
+                        const btnGroup = cb.parentElement.querySelector('.action-buttons');
+                        if (btnGroup) {
+                            btnGroup.style.display = 'inline-block';
+                        }
+                    }
+                });
+            });
+        }
+
+        function disableSelection() {
+            document.getElementById('selectButton').style.display = 'inline-block';
+            document.getElementById('unselectButton').style.display = 'none';
+
+            const checkboxes = document.querySelectorAll('.account-checkbox');
+            const actionButtons = document.querySelectorAll('.action-buttons');
+
+            checkboxes.forEach(cb => {
+                cb.checked = false;
+                cb.disabled = true;
+                cb.style.display = 'none';
+            });
+
+            actionButtons.forEach(btn => {
+                btn.style.display = 'none';
+            });
+        }
+
+        function updateAccount(id) {
+            window.location.href = `/ChartsOfAccounts/UpdateAccount?id=${id}`;
+        }
+
+        function openDeleteModal(type, id) {
+            const form = document.getElementById('deleteForm');
+            const title = document.getElementById('deleteModalTitle');
+            const body = document.getElementById('deleteModalBody');
+            const input = document.getElementById('deleteId');
+
+            input.value = id;
+
+            if (type === 'account') {
+                title.innerText = "Delete Account";
+                body.innerText = "Are you sure you want to delete this account and all of its child accounts?";
+                form.action = "?handler=Delete";
+            }
+            const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
+            modal.show();
+        }
+    </script>
+}

@@ -7,7 +7,7 @@ namespace Qtec.AccountManagement.Application.Services
     public class AccountManagementService
     {
         private readonly IUnitOfWork _unitOfWork;
-        
+
         public AccountManagementService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -32,7 +32,6 @@ namespace Qtec.AccountManagement.Application.Services
             await _unitOfWork.CommitAsync();
             return true;
         }
-
 
         public Task<IEnumerable<AccountDto>> GetAllAccountsAsync()
         {
@@ -65,6 +64,39 @@ namespace Qtec.AccountManagement.Application.Services
                 }
             }
             return roots;
+        }
+
+        public Task<AccountDto?> GetAccountByIdAsync(Guid id)
+        {
+            return _unitOfWork.Accounts.GetAccountByIdAsync(id);
+        }
+
+        public async Task<bool> UpdateAccountAsync(Guid id, string name, string type, string? parentName)
+        {
+            var result = await _unitOfWork.Accounts.GetAccountByIdAsync(id);
+            if (result == null)
+                return false;
+            var parentId = await _unitOfWork.Accounts.GetParentIdByParentNameAsync(parentName);
+
+            var account = new Account
+            {
+                Id = id,
+                Name = name,
+                Type = type,
+                ParentId = parentId,
+            };
+            await _unitOfWork.Accounts.UpdateAccountAsync(account);
+            await _unitOfWork.CommitAsync();
+            return true;
+        }
+
+        public async Task<bool> DeleteAccountAsync(Guid Id)
+        {
+            if (Id == Guid.Empty)
+                return false;
+            await _unitOfWork.Accounts.DeleteAccountAsync(Id);
+            await _unitOfWork.CommitAsync();
+            return true;
         }
     }
 }
