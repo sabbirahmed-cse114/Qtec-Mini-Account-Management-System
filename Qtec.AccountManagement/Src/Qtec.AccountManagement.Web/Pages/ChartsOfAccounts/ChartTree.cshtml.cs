@@ -27,10 +27,10 @@ namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
             if (success)
             {
                 TempData["SuccessMessage"] = "Account deleted successfully.";
-                return RedirectToPage();
+                return RedirectToPage("/ChartsOfAccounts/ChartTree");
             }
             TempData["ErrorMessage"] = "Failed to delete account.";
-            return RedirectToPage();
+            return RedirectToPage("/ChartsOfAccounts/ChartTree");
         }
     }
 }

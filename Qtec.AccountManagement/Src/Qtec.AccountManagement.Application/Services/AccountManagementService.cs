@@ -15,8 +15,6 @@ namespace Qtec.AccountManagement.Application.Services
 
         public async Task<bool> CreateAccountAsync(string name, string type, Guid? parentId)
         {
-            if ((string.IsNullOrWhiteSpace(name)) || (string.IsNullOrWhiteSpace(type)))
-                return false;
             if (await _unitOfWork.Accounts.IsAccountTakenAsync(name, parentId))
                 return false;
 

@@ -51,12 +51,12 @@ namespace Qtec.AccountManagement.Web.Pages.Users
             if (UserId == Guid.Empty || string.IsNullOrWhiteSpace(NewRole))
             {
                 TempData["ErrorMessage"] = "Invalid user or role.";
-                return RedirectToPage();
+                return RedirectToPage("/Users/UserList");
             }
 
             var updated = await _userManagementService.ChangeUserRoleAsync(UserId, NewRole);
             TempData["SuccessMessage"] = "Role changed successfully!";
-            return RedirectToPage();
+            return RedirectToPage("/Users/UserList");
         }
 
         public async Task<IActionResult> OnPostDeleteUserAsync(Guid Id)
@@ -67,9 +67,14 @@ namespace Qtec.AccountManagement.Web.Pages.Users
             {
                 return RedirectToPage("/AccessDenied");
             }
-            await _userManagementService.DeleteUserAsync(Id);
-            TempData["SuccessMessage"] = "User deleted successfully.";
-            return RedirectToPage();
+            var success = await _userManagementService.DeleteUserAsync(Id);
+            if (success)
+            {
+                TempData["SuccessMessage"] = "User deleted successfully.";
+                return RedirectToPage("/Users/UserList");
+            }
+            TempData["ErrorMessage"] = "Failed to delete user.";
+            return RedirectToPage("/Users/UserList");
         }
     }
 }

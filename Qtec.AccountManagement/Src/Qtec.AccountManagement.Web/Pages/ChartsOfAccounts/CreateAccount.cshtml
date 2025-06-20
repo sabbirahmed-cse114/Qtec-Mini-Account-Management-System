@@ -12,11 +12,13 @@
         <div class="mb-3">
             <label>Name</label>
             <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label>Type</label>
             <input asp-for="Type" class="form-control" />
+            <span asp-validation-for="Type" class="text-danger"></span>
         </div>
         <div class="mb-5">
             <label>Parent Account</label>
@@ -34,4 +36,7 @@
             <a asp-page="/ChartsOfAccounts/ChartTree" class="btn btn-outline-danger btn-sm col-5">Cancel</a>
         </div>
     </form>
+}
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
 }

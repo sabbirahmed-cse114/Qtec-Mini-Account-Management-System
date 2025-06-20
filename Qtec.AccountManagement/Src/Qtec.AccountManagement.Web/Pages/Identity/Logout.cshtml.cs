@@ -9,6 +9,7 @@ namespace Qtec.AccountManagement.Web.Pages.Identity
         public async Task<IActionResult> OnPost()
         {
             await HttpContext.SignOutAsync("MyCookieAuth");
+            TempData["SuccessMessage"] = "Logout successful!";
             return RedirectToPage("/Identity/Login");
         }
     }

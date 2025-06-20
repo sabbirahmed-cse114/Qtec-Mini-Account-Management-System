@@ -19,6 +19,12 @@
         @TempData["SuccessMessage"]
     </div>
 }
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
 
 <div class="treeview">
     <ul class="list-unstyled">

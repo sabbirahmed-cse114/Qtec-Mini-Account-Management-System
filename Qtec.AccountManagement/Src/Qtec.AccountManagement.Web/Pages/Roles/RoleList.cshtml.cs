@@ -25,8 +25,6 @@ namespace Qtec.AccountManagement.Web.Pages.Roles
         [BindProperty]
         public string Name { get; set; } = default!;
 
-        public string Message { get; set; }
-
         public IEnumerable<Role> Roles { get; set; } = new List<Role>();
 
         public async Task OnGetAsync()
@@ -36,19 +34,25 @@ namespace Qtec.AccountManagement.Web.Pages.Roles
 
         public async Task<IActionResult> OnPostUpdateRoleAsync()
         {
-            var result = await _authorizationService.AuthorizeAsync(User, "Admin");
-
-            if (!result.Succeeded)
+            if (ModelState.IsValid)
             {
-                return RedirectToPage("/AccessDenied");
-            }
-            var success = await _roleManagementService.UpdateRoleAsync(Id, Name);
+                var result = await _authorizationService.AuthorizeAsync(User, "Admin");
 
-            if (success)
-            {
-                TempData["SuccessMessage"] = "Role updated successfully.";
+                if (!result.Succeeded)
+                {
+                    return RedirectToPage("/AccessDenied");
+                }
+                var success = await _roleManagementService.UpdateRoleAsync(Id, Name);
+
+                if (success)
+                {
+                    TempData["SuccessMessage"] = "Role updated successfully.";
+                    return RedirectToPage("/Roles/RoleList");
+                }
+                TempData["ErrorMessage"] = "Failed to delete role.";
+                return RedirectToPage("/Roles/RoleList");
             }
-            return RedirectToPage();
+            return RedirectToPage("/Roles/RoleList");
         }
 
 
@@ -64,8 +68,10 @@ namespace Qtec.AccountManagement.Web.Pages.Roles
             if (success)
             {
                 TempData["SuccessMessage"] = "Role deleted successfully.";
+                return RedirectToPage("/Roles/RoleList");
             }
-            return RedirectToPage();
+            TempData["ErrorMessage"] = "Failed to delete role.";
+            return RedirectToPage("/Roles/RoleList");
         }
     }
 }

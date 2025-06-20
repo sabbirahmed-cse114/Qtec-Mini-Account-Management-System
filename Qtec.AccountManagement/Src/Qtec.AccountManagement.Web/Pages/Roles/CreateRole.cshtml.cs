@@ -18,19 +18,20 @@ namespace Qtec.AccountManagement.Web.Pages.Roles
         [BindProperty]
         public string Name { get; set; }
 
-        public string Message { get; set; }
-
         public async Task<IActionResult> OnPostAsync()
         {
-            var success = await _roleManagementService.CreateRoleAsync(Name);
-
-            if (success)
+            if (ModelState.IsValid)
             {
-                TempData["SuccessMessage"] = "Role created successfully!";
-                return RedirectToPage("/Roles/RoleList");
-            }
+                var success = await _roleManagementService.CreateRoleAsync(Name);
 
-            Message = "Role name already exists.";
+                if (success)
+                {
+                    TempData["SuccessMessage"] = "Role created successfully!";
+                    return RedirectToPage("/Roles/RoleList");
+                }
+                TempData["ErrorMessage"] = "Role name already exists.";
+                return Page();
+            }
             return Page();
         }
     }

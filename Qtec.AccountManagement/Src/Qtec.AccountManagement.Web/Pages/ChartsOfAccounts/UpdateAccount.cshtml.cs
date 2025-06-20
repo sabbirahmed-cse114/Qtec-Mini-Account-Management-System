@@ -60,7 +60,7 @@ namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
             if (string.IsNullOrWhiteSpace(Name) || string.IsNullOrWhiteSpace(Type))
             {
                 TempData["ErrorMessage"] = "Invalid account name or type.";
-                return RedirectToPage();
+                return Page();
             }
 
             var success = await _accountManagementService.UpdateAccountAsync(Id, Name, Type, ParentName);

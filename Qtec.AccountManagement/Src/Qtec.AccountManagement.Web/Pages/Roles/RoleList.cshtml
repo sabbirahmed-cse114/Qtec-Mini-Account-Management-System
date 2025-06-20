@@ -17,6 +17,12 @@
             @TempData["SuccessMessage"]
         </div>
     }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
 
     <div class="table-responsive">
         <table class="table table-hover">
@@ -37,13 +43,12 @@
                                     data-bs-target="#updateRoleModal"
                                     data-id="@role.Id"
                                     data-name="@role.Name">
-                                <i class="bi bi-pencil-square"></i>
+                                    <i class="bi bi-pencil-square"></i>
                             </button>
                             <button type="button" class="btn btn-outline-danger btn-sm"
                                     onclick="openDeleteModal('role', '@role.Id')">
-                                <i class="bi bi-trash"></i>
+                                    <i class="bi bi-trash"></i>
                             </button>
-
                         </td>
                     </tr>
                 }
@@ -53,9 +58,9 @@
 
     <partial name="_UpdateRoleModal" />
     <partial name="_DeleteModal" />
-    <partial name="_ValidationScriptsPartial" />
 
     @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
         <script>
             const updateModal = document.getElementById('updateRoleModal');
             updateModal.addEventListener('show.bs.modal', function (event) {

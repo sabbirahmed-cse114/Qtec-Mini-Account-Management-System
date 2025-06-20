@@ -16,37 +16,39 @@ namespace Qtec.AccountManagement.Web.Pages.Users
         }
 
         [BindProperty]
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; }
         [BindProperty]
-        public string Email { get; set; } = string.Empty;
+        public string Email { get; set; }
         [BindProperty]
-        public string Password { get; set; } = string.Empty;
+        public string Password { get; set; }
         [BindProperty]
         public Guid RoleId { get; set; }
         public List<SelectListItem> RoleList { get; set; }
 
-        public string Message { get; set; } = "";
-
         public async Task<IActionResult> OnPostAsync()
         {
-            var RoleNames = await _roleManagementService.GetRoleAsync();
-            foreach (var role in RoleNames)
+            if (ModelState.IsValid)
             {
-                if (role.Name == "Viewer")
+                var RoleNames = await _roleManagementService.GetRoleAsync();
+                foreach (var role in RoleNames)
                 {
-                    RoleId = role.Id;
-                    break;
+                    if (role.Name == "Viewer")
+                    {
+                        RoleId = role.Id;
+                        break;
+                    }
                 }
-            }
 
-            var success = await _userManagementService.RegistrationAsync(Name, Email, Password, RoleId);
+                var success = await _userManagementService.RegistrationAsync(Name, Email, Password, RoleId);
 
-            if (success)
-            {
-                TempData["SuccessMessage"] = "User created successfully!";
-                return RedirectToPage("/Identity/Login");
+                if (success)
+                {
+                    TempData["SuccessMessage"] = "User created successfully!";
+                    return RedirectToPage("/Identity/Login");
+                }
+                TempData["ErrorMessage"] = "Email already exists...";
+                return Page();
             }
-            Message = "Email already exists...";
             return Page();
         }
     }

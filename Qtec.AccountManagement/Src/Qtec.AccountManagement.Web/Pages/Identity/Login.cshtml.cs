@@ -16,37 +16,36 @@ namespace Qtec.AccountManagement.Web.Pages.Identity
         }
 
         [BindProperty]
-        public string Email { get; set; } = string.Empty;
+        public string Email { get; set; }
 
         [BindProperty]
-        public string Password { get; set; } = string.Empty;
-        public string? ErrorMessage { get; set; }
+        public string Password { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-                return Page();
-
-            var user = await _userManagementService.LoginAsync(Email, Password);
-
-            if (user == null)
+            if (ModelState.IsValid)
             {
-                ErrorMessage = "Invalid email or password.";
-                return Page();
+                var user = await _userManagementService.LoginAsync(Email, Password);
+
+                if (user == null)
+                {
+                    TempData["ErrorMessage"] = "Invalid email or password...";
+                    return Page();
+                }
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                    new Claim(ClaimTypes.Name, user.Name),
+                    new Claim(ClaimTypes.Email, user.Email),
+                    new Claim(ClaimTypes.Role, user.RoleName)
+                };
+
+                var identity = new ClaimsIdentity(claims, "MyCookieAuth");
+                var principal = new ClaimsPrincipal(identity);
+                await HttpContext.SignInAsync("MyCookieAuth", principal);
+                return RedirectToPage("/Index");
             }
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.Name),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.RoleName)
-            };
-
-            var identity = new ClaimsIdentity(claims, "MyCookieAuth");
-            var principal = new ClaimsPrincipal(identity);
-
-            await HttpContext.SignInAsync("MyCookieAuth", principal);
-            return RedirectToPage("/Index");
+            return Page();
         }
     }
 }

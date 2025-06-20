@@ -13,9 +13,6 @@ namespace Qtec.AccountManagement.Application.Services
         }
         public async Task<bool> CreateRoleAsync(string name)
         {
-            if (string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("Role name cannot be empty");
-
             if (await _unitOfWork.Roles.IsRoleNameTakenAsync(name))
                 return false;
 
@@ -36,9 +33,6 @@ namespace Qtec.AccountManagement.Application.Services
 
         public async Task<bool> UpdateRoleAsync(Guid id, string name)
         {
-            if (string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("Role name cannot be empty");
-
             var isTaken = await _unitOfWork.Roles.IsRoleNameTakenAsync(name);
             if (isTaken)
                 return false;

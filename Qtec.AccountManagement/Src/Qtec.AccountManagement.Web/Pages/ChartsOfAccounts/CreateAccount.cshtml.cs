@@ -32,14 +32,18 @@ namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
 
         public async Task<IActionResult> OnPostAsync()
         {
-            var success = await _accountManagementService.CreateAccountAsync(Name, Type, ParentId);
-            if (success)
+            if (ModelState.IsValid)
             {
-                TempData["SuccessMessage"] = "Account created successfully!";
-                return RedirectToPage("/ChartsOfAccounts/ChartTree");
+                var success = await _accountManagementService.CreateAccountAsync(Name, Type, ParentId);
+                if (success)
+                {
+                    TempData["SuccessMessage"] = "Account created successfully!";
+                    return RedirectToPage("/ChartsOfAccounts/ChartTree");
+                }
+                TempData["ErrorMessage"] = "Failed to create account.";
+                return Page();
             }
-            TempData["ErrorMessage"] = "Failed to create account.";
-            return RedirectToPage("/ChartsOfAccounts/CreateAccount");            
+            return Page();
         }
     }
 }
