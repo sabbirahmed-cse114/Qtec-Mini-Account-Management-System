@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Qtec.AccountManagement.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fbd10e0c99d014802d202ff37eea310f752b7a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d17a913965d2a0cfa1c58716a860a6ffe4aabb92")]
 [assembly: System.Reflection.AssemblyProductAttribute("Qtec.AccountManagement.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Qtec.AccountManagement.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

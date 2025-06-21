@@ -18,7 +18,11 @@
         <input type="text" asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-outline-info form-control">Create</button>
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-outline-info col-5">Create</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a asp-page="/ChartsOfAccounts/ChartTree" class="btn btn-outline-danger btn-sm col-5">Cancel</a>
+    </div>
 </form>
 
 @section Scripts {

@@ -26,6 +26,20 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/ChartsOfAccounts/ChartTree">Accounts</a>
                         </li>
+                        @if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Accountant"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-page="/Users/UserList">Users</a>
+                            </li>
+                        }
+                        
+                        @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-page="/Roles/RoleList">Roles</a>
+                            </li>
+                        }
+
                     </ul>
                     <div class="d-flex">
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
@@ -38,9 +52,9 @@
                         }
                         else
                         {
-                            <a asp-page="/Identity/Login" class="btn btn-outline-primary">Login</a>
+                            <a asp-page="/Identity/Login" class="btn btn-outline-info">Login</a>
                             <div class="d-flex"><p>&nbsp;&nbsp;</p></div>
-                            <a asp-page="/Users/Register" class="btn btn-outline-primary">Register</a>
+                            <a asp-page="/Users/Register" class="btn btn-outline-info">Register</a>
                         }
                     </div>
                 </div>
