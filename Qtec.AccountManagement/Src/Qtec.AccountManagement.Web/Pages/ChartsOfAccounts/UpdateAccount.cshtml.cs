@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Qtec.AccountManagement.Application.Services;
 using Qtec.AccountManagement.Domain.Dtos;
 
 namespace Qtec.AccountManagement.Web.Pages.ChartsOfAccounts
 {
+    [Authorize(Roles = "Admin,Manager,Accountant")]
     public class UpdateAccountModel : PageModel
     {
         private readonly AccountManagementService _accountManagementService;

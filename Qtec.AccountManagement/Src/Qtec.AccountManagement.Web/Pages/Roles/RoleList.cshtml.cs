@@ -6,6 +6,7 @@ using Qtec.AccountManagement.Domain.Entities;
 
 namespace Qtec.AccountManagement.Web.Pages.Roles
 {
+    [Authorize(Roles = "Admin,Manager,Accountant,Member")]
     public class RoleListModel : PageModel
     {
         private readonly IAuthorizationService _authorizationService;
