@@ -4,7 +4,7 @@ using Qtec.AccountManagement.Domain.Entities;
 
 namespace Qtec.AccountManagement.Application.Services
 {
-    public class AccountManagementService
+    public class AccountManagementService : IAccountManagementService
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -31,9 +31,9 @@ namespace Qtec.AccountManagement.Application.Services
             return true;
         }
 
-        public Task<IEnumerable<AccountDto>> GetAllAccountsAsync()
+        public async Task<IEnumerable<AccountDto>> GetAllAccountsAsync()
         {
-            return _unitOfWork.Accounts.GetAllAccountAsync();
+            return await _unitOfWork.Accounts.GetAllAccountAsync();
         }
 
         public async Task<List<AccountDto>> GetTreeAsync()
@@ -64,9 +64,9 @@ namespace Qtec.AccountManagement.Application.Services
             return roots;
         }
 
-        public Task<AccountDto?> GetAccountByIdAsync(Guid id)
+        public async Task<AccountDto?> GetAccountByIdAsync(Guid id)
         {
-            return _unitOfWork.Accounts.GetAccountByIdAsync(id);
+            return await _unitOfWork.Accounts.GetAccountByIdAsync(id);
         }
 
         public async Task<bool> UpdateAccountAsync(Guid id, string name, string type, string? parentName)

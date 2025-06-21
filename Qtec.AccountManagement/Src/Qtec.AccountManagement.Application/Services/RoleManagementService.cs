@@ -4,7 +4,7 @@ using Qtec.AccountManagement.Domain.Entities;
 
 namespace Qtec.AccountManagement.Application.Services
 {
-    public class RoleManagementService
+    public class RoleManagementService : IRoleManagementService
     {
         private readonly IUnitOfWork _unitOfWork;
         public RoleManagementService(IUnitOfWork unitOfWork)
