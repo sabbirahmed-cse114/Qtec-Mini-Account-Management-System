@@ -28,6 +28,7 @@ A robust ASP.NET Core Razor Pages application designed for a Mini Account Manage
  <img src ="./picture/Capture13.PNG" width = "1200"/><br/>
  <img src ="./picture/Capture6.PNG" width = "1200"/><br/>
  <img src ="./picture/Capture7.PNG" width = "1200"/><br/>
+ <img src ="./picture/Capture14.PNG" width = "1200"/>
  <img src ="./picture/Capture2.PNG" width = "1200"/><br/>
  <img src ="./picture/Capture3.PNG" width = "1200"/><br/>
  <img src ="./picture/Capture4.PNG" width = "1200"/><br/>
