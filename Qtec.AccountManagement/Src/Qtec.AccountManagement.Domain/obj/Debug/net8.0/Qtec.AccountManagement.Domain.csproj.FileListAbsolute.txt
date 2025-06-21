@@ -1,0 +1,12 @@
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\bin\Debug\net8.0\Qtec.AccountManagement.Domain.deps.json
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\bin\Debug\net8.0\Qtec.AccountManagement.Domain.dll
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\bin\Debug\net8.0\Qtec.AccountManagement.Domain.pdb
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\obj\Debug\net8.0\Qtec.AccountManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\obj\Debug\net8.0\Qtec.AccountManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\obj\Debug\net8.0\Qtec.AccountManagement.Domain.AssemblyInfo.cs
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\obj\Debug\net8.0\Qtec.AccountManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\obj\Debug\net8.0\Qtec.AccountManagement.Domain.sourcelink.json
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\obj\Debug\net8.0\Qtec.AccountManagement.Domain.dll
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\obj\Debug\net8.0\refint\Qtec.AccountManagement.Domain.dll
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\obj\Debug\net8.0\Qtec.AccountManagement.Domain.pdb
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Domain\obj\Debug\net8.0\ref\Qtec.AccountManagement.Domain.dll

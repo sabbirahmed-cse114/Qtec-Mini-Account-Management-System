@@ -1,0 +1,42 @@
+﻿@page
+@model Qtec.AccountManagement.Web.Pages.ChartsOfAccounts.CreateAccountModel
+@{
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <form method="post">
+        <div class="mb-3">
+            <label>Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label>Type</label>
+            <input asp-for="Type" class="form-control" />
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+        <div class="mb-5">
+            <label>Parent Account</label>
+            <select class="form-control" name="ParentId">
+                <option value="">None</option>
+                @foreach (var acc in Model.AllAccounts)
+                {
+                    <option value="@acc.Id">@acc.Name</option>
+                }
+            </select>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-info col-5">Create</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a asp-page="/ChartsOfAccounts/ChartTree" class="btn btn-outline-danger btn-sm col-5">Cancel</a>
+        </div>
+    </form>
+}
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

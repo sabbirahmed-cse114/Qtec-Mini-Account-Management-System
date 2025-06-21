@@ -1,0 +1,32 @@
+﻿<div class="modal fade" id="changeRoleModal" tabindex="-1" aria-labelledby="changeRoleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" asp-page-handler="ChangeRole">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="changeRoleModalLabel">Change Role</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="UserId" name="UserId" />
+                    <div class="mb-3">
+                        <label for="UserName" class="form-label">User</label>
+                        <input type="text" id="UserName" class="form-control" readonly />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="NewRole" class="form-label">Select New Role</label>
+                        <select class="form-select" name="NewRole" id="NewRole">
+                            @foreach (var role in Model.RoleNames)
+                            {
+                                <option value="@role.Name">@role.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-outline-info form-control">Change Role</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

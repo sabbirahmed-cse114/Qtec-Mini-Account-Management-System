@@ -1,0 +1,38 @@
+﻿@page
+@model Qtec.AccountManagement.Web.Pages.Users.RegisterModel
+@{
+    <div class="text-center">
+        <h2>Register</h2>
+    </div>
+    <form method="post">
+        <div class="mb-3">
+            <label>Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Email</label>
+            <input asp-for="Email" class="form-control" placeholder="test@example.com" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["ErrorMessage"]
+            </div>
+        }
+        <div class="mb-5">
+            <label>Password</label>
+            <input asp-for="Password" type="password" class="form-control" placeholder="******" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-info fw-bolder col-5">Register</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a asp-page="/Identity/Login" class="btn btn-outline-danger col-5">Cancel</a>
+        </div>
+    </form>
+}
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

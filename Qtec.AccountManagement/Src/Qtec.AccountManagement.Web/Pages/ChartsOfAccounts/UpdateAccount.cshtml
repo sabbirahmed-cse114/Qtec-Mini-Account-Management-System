@@ -1,0 +1,68 @@
+﻿@page
+@model Qtec.AccountManagement.Web.Pages.ChartsOfAccounts.UpdateAccountModel
+@using Qtec.AccountManagement.Domain.Dtos
+
+@{
+    ViewData["Title"] = "Update Account";
+}
+
+<h3 class="mb-3">Update Account</h3>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Type" class="form-label">Account Type</label>
+        <input asp-for="Type" class="form-control" />
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+    <div class="mb-5">
+        <label class="form-label">Parent Account</label>
+        <select class="form-select" name="ParentName" id="ParentName">
+            <option value="">None</option>
+
+            @{
+                var parentNames = new List<string>();
+
+                foreach (var account in Model.AllAccounts)
+                {
+                    if (!string.IsNullOrWhiteSpace(account.Name)
+                    && !Model.ExcludedChildAccountIds.Contains(account.Id)
+                    && !parentNames.Contains(account.Name))
+                    {
+                        parentNames.Add(account.Name);
+                    }
+                }
+            }
+
+            @foreach (var name in parentNames)
+            {
+                <option value="@name" selected="@(Model.ParentName == name ? "selected" : null)">
+                    @name
+                </option>
+            }
+        </select>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-outline-info col-5">Update</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a asp-page="/ChartsOfAccounts/ChartTree" class="btn btn-outline-danger col-5">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

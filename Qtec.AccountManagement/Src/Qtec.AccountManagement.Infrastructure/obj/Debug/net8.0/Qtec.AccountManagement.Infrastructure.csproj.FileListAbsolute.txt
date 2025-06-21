@@ -1,0 +1,16 @@
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\bin\Debug\net8.0\Qtec.AccountManagement.Infrastructure.deps.json
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\bin\Debug\net8.0\Qtec.AccountManagement.Infrastructure.dll
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\bin\Debug\net8.0\Qtec.AccountManagement.Infrastructure.pdb
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\Qtec.AccountManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\Qtec.AccountManagement.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\Qtec.AccountManagement.Infrastructure.AssemblyInfo.cs
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\Qtec.AccountManagement.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\Qtec.AccountManagement.Infrastructure.sourcelink.json
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\Qtec.AccountManagement.Infrastructure.dll
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\refint\Qtec.AccountManagement.Infrastructure.dll
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\Qtec.AccountManagement.Infrastructure.pdb
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\ref\Qtec.AccountManagement.Infrastructure.dll
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\bin\Debug\net8.0\Qtec.AccountManagement.Domain.dll
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\bin\Debug\net8.0\Qtec.AccountManagement.Domain.pdb
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\Qtec.AccountManagement.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\sabbi\Desktop\Account-Management-System\Qtec.AccountManagement\Src\Qtec.AccountManagement.Infrastructure\obj\Debug\net8.0\Qtec.Acc.71EBEFCF.Up2Date
