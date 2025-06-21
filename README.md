@@ -22,14 +22,19 @@ A robust ASP.NET Core Razor Pages application designed for a Mini Account Manage
   - Clean Architecture
   - Repository and Unit of Work design patterns
 
-<br/><br/>
+<br/><br/><hr/>
 
- <img src ="./picture/Capture1.PNG" width = "1200"/><br/>
- <img src ="./picture/Capture13.PNG" width = "1200"/><br/>
- <img src ="./picture/Capture6.PNG" width = "1200"/><br/>
- <img src ="./picture/Capture7.PNG" width = "1200"/><br/>
+ <img src ="./picture/Capture1.PNG" width = "1200"/>
+ <img src ="./picture/Capture13.PNG" width = "1200"/>
+ <img src ="./picture/Capture6.PNG" width = "1200"/>
+ <img src ="./picture/Capture7.PNG" width = "1200"/>
  <img src ="./picture/Capture14.PNG" width = "1200"/>
- <img src ="./picture/Capture2.PNG" width = "1200"/><br/>
- <img src ="./picture/Capture3.PNG" width = "1200"/><br/>
- <img src ="./picture/Capture4.PNG" width = "1200"/><br/>
- <img src ="./picture/Capture5.PNG" width = "1200"/><br/>
+ <img src ="./picture/Capture2.PNG" width = "1200"/>
+ <img src ="./picture/Capture8.PNG" width = "1200"/>
+ <img src ="./picture/Capture9.PNG" width = "1200"/>
+ <img src ="./picture/Capture3.PNG" width = "1200"/>
+ <img src ="./picture/Capture10.PNG" width = "1200"/>
+ <img src ="./picture/Capture11.PNG" width = "1200"/>
+ <img src ="./picture/Capture12.PNG" width = "1200"/>
+ <img src ="./picture/Capture4.PNG" width = "1200"/>
+ <img src ="./picture/Capture5.PNG" width = "1200"/>
