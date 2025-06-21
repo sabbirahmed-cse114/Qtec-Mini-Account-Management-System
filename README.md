@@ -1,18 +1,23 @@
 # Account-Management-System
 
 
-Developed a robust ASP.NET Core Razor Pages application for Mini Account management system.<br/>
-Key features include:<br/>
-• Stored procedure–based data access.<br/>
-• Hierarchical Parent/Child account structure.<br/>
-• Bootstrap TreeView with selectable accounts.<br/>
-• Data operations (Create, Update, Delete, GetAll).<br/>
-• Identity and Custom Role-based access control(Admin, Manager, Accountant, Viewer, etc).<br/>
-• Assigned access rights to modules.<br/><br/>
+### **Project Overview**
+A robust ASP.NET Core Razor Pages application designed for a Mini Account Management System, following clean architectural principles with a focus on maintainability and scalability.<br/>
 
-Technologies:<br/>
-Serilog for logging, Autofac, Stored Procedure, etc.<br/>
-Architecture:
-Clean Architecture.<br/>
-Design Patterns:
-Repository, Unit of Work.<br/>
+#### **Key Features:<br/>**
+  - Stored Procedure–based data access.
+  - Hierarchical Chart of Accounts with Parent–Child relationships.
+  - Bootstrap TreeView with node selection and contextual actions.
+  - Full support for CRUD operations via sp_ManageChartOfAccounts.
+  - Custom Identity integration with Role-based access control (Admin, Manager, Accountant, Viewer, etc.).
+  - Access rights assigned per module/functionality.
+
+#### **Technologies Used:<br/>**
+  - ASP.NET Core Razor Pages
+  - Serilog for logging
+  - Autofac for dependency injection
+  - SQL Server Stored Procedures for all data access
+
+#### **Architecture & Patterns**
+  - Clean Architecture
+  - Repository and Unit of Work design patterns
