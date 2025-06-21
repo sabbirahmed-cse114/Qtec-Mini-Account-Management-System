@@ -22,4 +22,10 @@ A robust ASP.NET Core Razor Pages application designed for a Mini Account Manage
   - Clean Architecture
   - Repository and Unit of Work design patterns
 
- <img src ="./picture/Capture1.PNG" width = "1000"/>
+<br/><br/>
+
+ <img src ="./picture/Capture1.PNG" width = "1200"/>
+ <img src ="./picture/Capture2.PNG" width = "1200"/>
+ <img src ="./picture/Capture3.PNG" width = "1200"/>
+ <img src ="./picture/Capture4.PNG" width = "1200"/>
+ <img src ="./picture/Capture5.PNG" width = "1200"/>
